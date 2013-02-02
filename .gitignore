@@ -1,0 +1,44 @@
+#################
+## KiCad
+#################
+## REQUIRED
+#################
+# foxy_board/ 
+# ├── foxy_board.pro 
+# ├── foxy_board.sch 
+# ├── foxy_board.brd 
+# ├── foxy_board.net 
+# ├── lib 
+# │ ├── foxy_board.lib 
+# │ └── foxy_board.mod 
+# ├── gerber 
+# ├── ... 
+# └── ...
+# 
+#################
+## IGNORED
+#################
+
+# Backup files
+*.000
+*.bak
+*.bck
+
+# KiCad project file
+# Comment the following line if you want to have your project file included.
+*.pro
+
+# GERBER files
+*.gbl
+*.gbo
+*.gbs
+*.gtl
+*.gto
+*.gtp
+*.gts
+*.gbr
+
+*.drl
+
+*.eps
+
