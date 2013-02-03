@@ -65,7 +65,7 @@ A big thank you to the following people and organisations, without whose experie
 - Mark Burton at [SmartAvionics.com](http://www.smartavionics.com/)
 - Chris Middlemiss, Paul Oliver - [Würth Elektronik - PCB division](http://we-online.com/web/en/leiterplatten/willkommen_/Willkommen.php)
 - Anders, Filip and Adam - [Energy Micro](http://energymicro.com)
-- Jorn Werdelin[LindeWerdelin](http://lindewerdelin.com)
+- Jorn Werdelin [LindeWerdelin](http://lindewerdelin.com)
 - [Olimex](http://olimex.com)
 - [Sparkfun](http://sparkfun.com)
 - + more acknowledments to come...
