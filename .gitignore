@@ -23,6 +23,8 @@
 *.000
 *.bak
 *.bck
+*-cache.lib
+$*.brd
 
 # KiCad project file
 # Comment the following line if you want to have your project file included.
