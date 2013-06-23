@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-11-16 BZR 3805)-testing date = 09/02/2013 08:56:03
+Cmp-Mod V01 Created by PcbNew date = 16/02/2013 09:45:18
 
 BeginCmp
 TimeStamp = /509921C5;
@@ -359,23 +359,9 @@ EndCmp
 
 BeginCmp
 TimeStamp = /4FFDFF31;
-Reference = P7;
+Reference = P6;
 ValeurCmp = DBG_RESETn;
 IdModule  = PIN_TEST;
-EndCmp
-
-BeginCmp
-TimeStamp = /500EDF04;
-Reference = PAD1;
-ValeurCmp = PIEZO_PAD1;
-IdModule  = PAD_dia_2mm;
-EndCmp
-
-BeginCmp
-TimeStamp = /500EDF78;
-Reference = PAD2;
-ValeurCmp = PIEZO_PAD2;
-IdModule  = PAD_dia_2mm;
 EndCmp
 
 BeginCmp
@@ -519,6 +505,20 @@ IdModule  = RESC1005X40N_IPC7351B;
 EndCmp
 
 BeginCmp
+TimeStamp = /500EDF04;
+Reference = SP1;
+ValeurCmp = 0910-1-57-20-75-14-11-0;
+IdModule  = 0901-X_MILL-MAX;
+EndCmp
+
+BeginCmp
+TimeStamp = /500EDF78;
+Reference = SP2;
+ValeurCmp = 0910-1-57-20-75-14-11-0;
+IdModule  = 0901-X_MILL-MAX;
+EndCmp
+
+BeginCmp
 TimeStamp = /501EEDF1;
 Reference = SW1;
 ValeurCmp = KMS221GPLFS;
@@ -607,6 +607,13 @@ TimeStamp = /500E9DC6;
 Reference = X2;
 ValeurCmp = ABM11-48.000MHZ-B7G-T;
 IdModule  = ABM11_2016_Crystal_Abracon;
+EndCmp
+
+BeginCmp
+TimeStamp = /511E0293;
+Reference = X3;
+ValeurCmp = 7BB-20-3;
+IdModule  = 7BB-20-3_piezoelectric diaphragm_murata;
 EndCmp
 
 EndListe

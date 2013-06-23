@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date 10/02/2013 15:17:37
+EESchema Schematic File Version 2  date 16/02/2013 15:43:38
 LIBS:OTM-02
 LIBS:OTM-02-cache
 EELAYER 27 0
@@ -7,7 +7,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
 Title "OTM-02 - Open source Time Machine #2"
-Date "10 feb 2013"
+Date "16 feb 2013"
 Rev "M"
 Comp ""
 Comment1 ""
@@ -15,13 +15,11 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text Notes 700  10850 0    30   ~ 0
+Text Notes 700  10650 0    30   ~ 0
 Fit one of the following\nSharp Microelectronics Memory LCDs:\nLS013B4DN02 - 96x96 1.35"\nLS013B7DH03 - 128x128 1.26"\nLS013B7DH01 - 144x168 1.28"\nor similar.\nDetails here: sharpmemorylcd.com
-Text Notes 5750 6150 0    30   ~ 0
-NOTE: LFXO (32,768kHz) is Option A
-Text GLabel 6350 6050 0    45   Input ~ 0
+Text GLabel 6550 6050 0    45   Input ~ 0
 LFXO_N
-Text GLabel 6900 5950 0    45   Output ~ 0
+Text GLabel 6550 5950 0    45   Output ~ 0
 LFXO_P
 $Comp
 L CRYSTAL X1
@@ -29,6 +27,7 @@ U 1 1 504DC403
 P 11850 5400
 F 0 "X1" H 11850 5550 50  0000 C CNN
 F 1 "ABS06-32.768KHZ-9-1-T" H 11850 5250 31  0000 C CNN
+F 4 "ABS06-32.768KHZ-9-1-T" H 11850 5400 60  0001 C CNN "Value_Alt"
 	1    11850 5400
 	1    0    0    -1  
 $EndComp
@@ -146,12 +145,12 @@ F 1 "KMS221GPLFS" H 15350 1270 50  0000 C CNN
 	1    15350 1400
 	1    0    0    -1  
 $EndComp
-Text Notes 3300 2600 0    30   ~ 0
-Battery:\nLi-Po\nCS-IPSF5SL\n3V7 150mAh\n15*24*2.5mm
+Text Notes 4050 2950 0    50   ~ 0
+Battery:\nLi-Po 3.7V 150mAh\nP/N: CS-IPSF5SL\n15*24*2.5mm
 NoConn ~ 6350 9650
-Text Notes -17850 6900 0    120  ~ 0
+Text Notes -17850 7100 0    120  ~ 0
 NOTES 2:\nX1 previously: 815-ABM8G-48-B4Y-T (Abracon, 3.3x2.6mm)\nQ2 Previously: IRLML2244TRPBF\n\nPiezo driving:\nhttp://hades.mech.northwestern.edu/index.php/Driving_a_piezo_speaker_with_a_PIC\n\nConsider adding UEXT - see Olimex.com.\n\nMaxim advice (AN5329): For all modes of power-up, be mindful of the need for a 2-second delay\nprior to initiating an I²C communication. \n\nModify firware (*.h) header file with correct Port/Pin numbers.\n\nConsider SMT-0540-T-7-R (DigiKey) 5x5x2mm 3V 100mA 4kHz buzzer\n\nCheckout Piezo Composer v1.0:\nhttp://www.nerdkits.com/forum/thread/2025/\n\nBest piezo MCU protection tutorial found:\nhttp://leucos.lstilde.org/wp/2009/06/piezo-transducer-signal-conditioning/\n\nEMC/EMI Notes:\nhttp://www.eetimes.com/design/embedded/4006744/Tutorial-Improving-the-transient-immunity-of-your-microcontroller-based-embedded-design--Part-1?Ecosystem=embedded\n\nMotor driving pseudo code:\nhttp://www.precisionmicrodrives.com/application-notes-technical-guides/application-bulletins/ab-013-advanced-vibration-alerting-waveforms\n\nVIBRATORY MOTORS\n--------------------------\n- https://catalog.precisionmicrodrives.com/order-parts/product/303-100-3mm-vibration-motor-8-1mm-type\n- https://catalog.precisionmicrodrives.com/order-parts/product/910-101-10mm-brushless-vibration-motor-3mm-type\n- https://catalog.precisionmicrodrives.com/order-parts/product/310-103-10mm-vibration-motor-2-7mm-type\n\nTHINNEST:\n- https://catalog.precisionmicrodrives.com/order-parts/product/310-118-10mm-vibration-motor-2-1mm-type\n\nSMALLEST PANCAKE:\n- https://catalog.precisionmicrodrives.com/order-parts/product/308-100-8mm-vibration-motor-3-4mm-type\n\nSmallest SMD Mount:\n304-103
-NoConn ~ 7100 5750
+NoConn ~ 6750 5750
 $Comp
 L C C12
 U 1 1 50216F85
@@ -161,25 +160,25 @@ F 1 "10P" V 11850 4400 50  0000 L CNN
 	1    11750 4300
 	0    1    1    0   
 $EndComp
-NoConn ~ 7100 4750
-NoConn ~ 7100 4850
+NoConn ~ 6750 4750
+NoConn ~ 6750 4850
 NoConn ~ 6350 9750
 $Comp
 L GND #PWR07
 U 1 1 50210577
-P 5350 2150
-F 0 "#PWR07" H 5350 2150 30  0001 C CNN
-F 1 "GND" H 5350 2080 30  0001 C CNN
-	1    5350 2150
+P 5350 2050
+F 0 "#PWR07" H 5350 2050 30  0001 C CNN
+F 1 "GND" H 5350 1980 30  0001 C CNN
+	1    5350 2050
 	1    0    0    -1  
 $EndComp
 $Comp
 L C C25
 U 1 1 50210568
-P 5050 1900
-F 0 "C25" V 5100 1700 50  0000 L CNN
-F 1 "100N" V 4975 1650 50  0000 L CNN
-	1    5050 1900
+P 5050 1850
+F 0 "C25" V 5100 1650 50  0000 L CNN
+F 1 "100N" V 4975 1600 50  0000 L CNN
+	1    5050 1850
 	0    -1   -1   0   
 $EndComp
 $Comp
@@ -201,93 +200,91 @@ F 1 "KMS221GPLFS" H 15350 6070 50  0000 C CNN
 	1    15350 6200
 	1    0    0    -1  
 $EndComp
-NoConn ~ 7100 5450
+NoConn ~ 6750 5450
 NoConn ~ 6350 9450
 NoConn ~ 6350 10650
 $Comp
 L PWR_FLAG #FLG08
 U 1 1 501C1632
-P 2200 6800
-F 0 "#FLG08" H 2200 7070 30  0001 C CNN
-F 1 "PWR_FLAG" H 2200 7030 30  0000 C CNN
-	1    2200 6800
+P 2500 6350
+F 0 "#FLG08" H 2500 6620 30  0001 C CNN
+F 1 "PWR_FLAG" H 2500 6580 30  0000 C CNN
+	1    2500 6350
 	1    0    0    -1  
 $EndComp
 $Comp
 L PWR_FLAG #FLG09
 U 1 1 501C153B
-P 5050 900
-F 0 "#FLG09" H 5050 1170 30  0001 C CNN
-F 1 "PWR_FLAG" H 5050 1130 30  0000 C CNN
-	1    5050 900 
+P 4950 850
+F 0 "#FLG09" H 4950 1120 30  0001 C CNN
+F 1 "PWR_FLAG" H 4950 1080 30  0000 C CNN
+	1    4950 850 
 	1    0    0    -1  
 $EndComp
-Text Notes 2500 7300 0    30   ~ 0
-NOTE: No PWM permitted with brushless motors.
 $Comp
 L 3V0 #PWR010
 U 1 1 501C0A7F
-P 6800 2200
-F 0 "#PWR010" H 6800 2300 40  0001 C CNN
-F 1 "3V0" H 6800 2325 30  0000 C CNN
-	1    6800 2200
+P 6800 2100
+F 0 "#PWR010" H 6800 2200 40  0001 C CNN
+F 1 "3V0" H 6800 2225 30  0000 C CNN
+	1    6800 2100
 	1    0    0    -1  
 $EndComp
 $Comp
 L 3V0 #PWR011
 U 1 1 501C0A76
-P 3450 6150
-F 0 "#PWR011" H 3450 6250 40  0001 C CNN
-F 1 "3V0" H 3450 6275 30  0000 C CNN
-	1    3450 6150
+P 3750 5600
+F 0 "#PWR011" H 3750 5700 40  0001 C CNN
+F 1 "3V0" H 3750 5725 30  0000 C CNN
+	1    3750 5600
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR012
 U 1 1 501C06B9
-P 1250 7250
-F 0 "#PWR012" H 1250 7250 30  0001 C CNN
-F 1 "GND" H 1250 7180 30  0001 C CNN
-	1    1250 7250
+P 1550 6800
+F 0 "#PWR012" H 1550 6800 30  0001 C CNN
+F 1 "GND" H 1550 6730 30  0001 C CNN
+	1    1550 6800
 	-1   0    0    -1  
 $EndComp
 Text GLabel 6150 10950 0    45   Output ~ 0
 3V0_EN
-Text GLabel 4775 2400 0    45   Input ~ 0
+Text GLabel 4675 2350 0    45   Input ~ 0
 3V0_EN
-Text Notes 8900 3450 0    60   ~ 12
-• THIS IS A WORK IN PROGRESS,\nCONSIDER IT A STARTING POINT.\nLatest version is available at:\ngithub.com/hairykiwi/OTM-02\n\n• U1 Pin/function locations to be optimised\naccording to PCB layout requirements.\n\n• All XX_PUSHER MCU inputs coincide\nwith Low Energy Sense (LES)\ninputs for potential implementation of\ncapacitive touch button UI.
+Text Notes 7000 3450 0    60   ~ 12
+• THIS IS A WORK IN PROGRESS, CONSIDER IT A STARTING POINT.\n\n• Latest version is available at: github.com/hairykiwi/OTM-02\n\n• U1 Pin/function locations to be optimised according to PCB layout requirements.\n\n• All XX_PUSHER MCU inputs coincide with Low Energy Sense (LES)\ninputs for ease of implementing capacitive touch button UI in alternate PCB layout.
 Text Notes 6125 11425 0    50   ~ 0
 Special thanks to family, friends and colleagues who have put up with my (often ironic) obsession with watchmaking - in some cases for more than a decade.
 Text Notes 7075 325  0    50   ~ 10
 "The time has come," the Walrus said..." (Lewis Carroll, 1872)\n
-NoConn ~ 7100 5550
-Text GLabel 6900 6150 0    45   Output ~ 0
+NoConn ~ 6750 5550
+Text GLabel 6550 6150 0    45   Output ~ 0
 BACKLIGHT_EN
-Text Notes 2450 7550 0    80   ~ 16
+Text Notes 2950 7250 0    80   ~ 16
 Backlight
-NoConn ~ 7100 5350
+NoConn ~ 6750 5350
 NoConn ~ 6350 9550
-NoConn ~ 7100 5650
+NoConn ~ 6750 5650
 NoConn ~ 14000 9800
-Text Notes 1000 8000 0    30   ~ 0
-Piezoelectric Diaphragm (X3) P/N: 7BB-20-3
+Text Notes 1950 7700 0    30   ~ 0
+X3 typically mounted in case-back\nand connected via SP1 & SP2 using\nspring-loaded contacts.\nP/N Details:\n7BB-20-3: 20 mm dia, leadless\n7BB-20-6L0: 20 mm dia, with\n32AWG x 50 mm flying leads.
 $Comp
-L GS1 PAD2
+L GS1 SP2
 U 1 1 500EDF78
-P 950 8500
-F 0 "PAD2" V 1000 8800 40  0000 R CNN
-F 1 "PIEZO_PAD2" V 950 8700 30  0000 C CNN
-	1    950  8500
+P 750 8100
+F 0 "SP2" V 750 8000 50  0000 R CNN
+F 1 "0910-1-57-20-75-14-11-0" V 750 8200 50  0001 C CNN
+	1    750  8100
 	0    -1   -1   0   
 $EndComp
 $Comp
-L GS1 PAD1
+L GS1 SP1
 U 1 1 500EDF04
-P 950 8300
-F 0 "PAD1" V 900 8000 40  0000 L CNN
-F 1 "PIEZO_PAD1" V 950 8100 30  0000 C CNN
-	1    950  8300
+P 750 7900
+F 0 "SP1" V 750 8000 50  0000 L CNN
+F 1 "0910-1-57-20-75-14-11-0" V 1693 8952 50  0000 C CNN
+	1    750  7900
 	0    1    1    0   
 $EndComp
 $Comp
@@ -353,46 +350,46 @@ MCP73831T calcs:\nUSB_VBUS: VMax = 5.25\nSTAT VMax = (VDD - 1 to VDD - 0.4) = 4.
 $Comp
 L VMCU #PWR016
 U 1 1 4FFF51DE
-P 5150 6750
-F 0 "#PWR016" H 5200 6780 20  0001 C CNN
-F 1 "VMCU" H 5150 6840 30  0000 C CNN
-	1    5150 6750
+P 5650 6750
+F 0 "#PWR016" H 5700 6780 20  0001 C CNN
+F 1 "VMCU" H 5650 6840 30  0000 C CNN
+	1    5650 6750
 	1    0    0    -1  
 $EndComp
 $Comp
 L +5V_USB #PWR23
 U 1 1 4FFF4C8C
-P 3950 3000
-F 0 "#PWR23" H 3950 3130 20  0001 C CNN
-F 1 "+5V_USB" H 3950 3130 30  0000 C CNN
-	1    3950 3000
+P 1800 2900
+F 0 "#PWR23" H 1800 3030 20  0001 C CNN
+F 1 "+5V_USB" H 1800 3030 30  0000 C CNN
+	1    1800 2900
 	1    0    0    -1  
 $EndComp
 $Comp
 L PWR_FLAG #FLG017
 U 1 1 4FFF4C5A
-P 3700 3100
-F 0 "#FLG017" H 3700 3370 30  0001 C CNN
-F 1 "PWR_FLAG" H 3700 3330 30  0000 C CNN
-	1    3700 3100
+P 1550 3000
+F 0 "#FLG017" H 1550 3270 30  0001 C CNN
+F 1 "PWR_FLAG" H 1550 3230 30  0000 C CNN
+	1    1550 3000
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR018
 U 1 1 4FFF4BC3
-P 4250 3150
-F 0 "#PWR018" H 4250 3150 30  0001 C CNN
-F 1 "GND" H 4250 3080 30  0001 C CNN
-	1    4250 3150
+P 2100 3050
+F 0 "#PWR018" H 2100 3050 30  0001 C CNN
+F 1 "GND" H 2100 2980 30  0001 C CNN
+	1    2100 3050
 	1    0    0    -1  
 $EndComp
 $Comp
 L PWR_FLAG #FLG019
 U 1 1 4FFF4B39
-P 4250 3100
-F 0 "#FLG019" H 4250 3370 30  0001 C CNN
-F 1 "PWR_FLAG" H 4250 3330 30  0000 C CNN
-	1    4250 3100
+P 2100 3000
+F 0 "#FLG019" H 2100 3270 30  0001 C CNN
+F 1 "PWR_FLAG" H 2100 3230 30  0000 C CNN
+	1    2100 3000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -407,48 +404,48 @@ $EndComp
 $Comp
 L EFM32LG330F256 U1
 U 1 1 4FF2C309
-P 7100 4750
-F 0 "U1" H 7430 4930 60  0000 L BNN
-F 1 "EFM32LG330F256" H 9750 2800 60  0000 L BNN
-	1    7100 4750
+P 6750 4750
+F 0 "U1" H 7080 4930 60  0000 L BNN
+F 1 "EFM32LG330F256" H 9400 2800 60  0000 L BNN
+	1    6750 4750
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR021
 U 1 1 4FFED9AB
-P 700 5550
-F 0 "#PWR021" H 700 5550 30  0001 C CNN
-F 1 "GND" H 700 5480 30  0001 C CNN
-	1    700  5550
+P 750 4950
+F 0 "#PWR021" H 750 4950 30  0001 C CNN
+F 1 "GND" H 750 4880 30  0001 C CNN
+	1    750  4950
 	-1   0    0    -1  
 $EndComp
 $Comp
 L C C33
 U 1 1 4FFED8B5
-P 700 5250
-F 0 "C33" H 500 5150 50  0000 L CNN
-F 1 "10N" H 500 5350 50  0000 L CNN
-	1    700  5250
+P 750 4600
+F 0 "C33" H 550 4500 50  0000 L CNN
+F 1 "10N" H 550 4700 50  0000 L CNN
+	1    750  4600
 	-1   0    0    1   
 $EndComp
 $Comp
 L R R3
 U 1 1 4FFED84A
-P 1350 7800
-F 0 "R3" V 1250 7800 50  0000 C CNN
-F 1 "500R" V 1350 7795 50  0000 C CNN
-	1    1350 7800
+P 1150 7400
+F 0 "R3" V 1050 7400 50  0000 C CNN
+F 1 "500R" V 1150 7395 50  0000 C CNN
+	1    1150 7400
 	0    1    1    0   
 $EndComp
 Text Notes 11300 9450 0    50   ~ 10
-This work is licensed under the Creative Commons\nAttribution-ShareAlike 3.0 Unported License.\nTo view a copy of this license, visit\nhttp://creativecommons.org/licenses/by-sa/3.0/.\n\nSend comments, feedback, suggestions to:\nHamish Mead\ninfo at meadtimemachines dot co dot uk\n\nWith thanks to Microchip, Sparkfun and Olimex for\nthe recharge circuit topology, to Mark Burton at\nSmartAvionics.com and the energy friendly\npeople at Energymicro.com for the ongoing\ndiscussions and much valued advice.
+This work is licensed under the Creative Commons\nAttribution-ShareAlike 3.0 Unported License.\nTo view a copy of this license, visit\nhttp://creativecommons.org/licenses/by-sa/3.0/.\n\nSend comments, feedback, suggestions to:\nHamish Mead\ninfo at meadtimemachines dot co dot uk\n\nWith thanks to Microchip, Sparkfun and Olimex for\nthe recharge circuit topology, to Mark Burton at\nSmartAvionics.com and the energy friendly\npeople at Energymicro.com for the ongoing\ndiscussions and much valued advice.\n- Further acknowledgments on the project\nGithub page.
 $Comp
-L CONN_1 P7
+L CONN_1 P6
 U 1 1 4FFDFF31
-P 15250 8350
-F 0 "P7" H 15330 8350 40  0000 L CNN
-F 1 "DBG_RESETn" H 15250 8405 30  0000 C CNN
-	1    15250 8350
+P 15250 8200
+F 0 "P6" H 15330 8200 40  0000 L CNN
+F 1 "DBG_RESETn" H 15250 8255 30  0000 C CNN
+	1    15250 8200
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -496,7 +493,7 @@ F 1 "DBG_VCC" H 15250 7505 30  0000 C CNN
 	1    15250 7450
 	1    0    0    -1  
 $EndComp
-Text GLabel 3550 9600 2    45   Input ~ 0
+Text GLabel 3550 9400 2    45   Input ~ 0
 MLCD_SCK
 Text Notes -5850 4050 0    118  ~ 0
 UEXT Connector (Olimex Standard)\nFor possible implementation\nPin 	Name 	I/O 	Logic 	Primary Use\n1 	3.3V 	S 	S 	+3.3 volt\n2 	GND 	S 	S 	Ground\n3 	TXD 	O 	PP 	Transmit Data for Async Serial bus\n4 	RXD 	I 	PP 	Receive Data for Async Serial bus\n5 	SCL 	O 	OD 	Clock for I2C bus\n6 	SDA 	I/O 	OD 	Bidirectional Serial Data for I2C bus\n7 	MISO 	I 	PP 	Serial Data In for SPI bus\n8 	MOSI 	O 	PP 	Serial Data Out for SPI bus\n9 	SCK 	O 	PP 	Clock for SPI bus\n10 	SSEL 	O 	PP 	Slave Select for SPI bus
@@ -506,21 +503,21 @@ Text Notes -5850 750  0    118  ~ 0
 3V0 / 3V3 VDD Compatibility List\n----------------------\n\nRV3029: 1.3 - 5.5V (RTC)\nTPS78230DRV: 0 - 6V 3V REG\nEFM32LG330F256: 1.85 - 3.8V (MCU)\n\n910-101: 3V Nom. - 1.6 - 3.6V (MOTOR)\n310-103: 3V Nom. - 1.0 - 3.6V (MOTOR)\n310-118: 3V Nom. - 1.2 - 3.3V (MOTOR)\n\nMCP73831T-2ACI/OT - N/A (LiPoCharger)
 Text Notes -17850 4000 0    120  ~ 0
 NOTES 1:\n1. MTM-OTM-01: After initially implementing the 1724 step-up converter circuit, testing revealed\nthe MLCD (LS01384DN02) appears to operate equally well from a 3V3 supply.\n\n2. SCS, SI, SCLK, DISP: 3 V Amplitude | (IF UTILISED) EXTCOMIN: 5 V Amplitude\n\n3. Regarding LS013B4DN02 VCOM:\na. If a software clock is employed, EXTMODE is connected to VSS and bit V\nof the command bit string sets the state of VCOM. This bit must be toggled,\n(by writing to the panel) at least once per second.\nb. If an external clock is utilised, EXTMODE is connected to VDD and the\nexternal (MIN 1Hz) clock should be supplied on the EXTCOMM pin.\n\n4. C1 is 100N MIN. It may be 1U for convenience.
-Text GLabel 4900 7500 0    45   BiDi ~ 0
+Text GLabel 5400 7500 0    45   BiDi ~ 0
 FG_I2C_SDA
-Text GLabel 4900 7600 0    45   Output ~ 0
+Text GLabel 5400 7600 0    45   Output ~ 0
 FG_I2C_SCL
-Text GLabel 3650 2200 2    45   Output ~ 0
+Text GLabel 3400 2300 2    45   Output ~ 0
 VBATT_SENSE
-Text Notes 2500 7050 0    30   ~ 0
-PWM of 304-103 (Permanent Magnet Motor):\nL = 600uH\nFor C = 100nF - F(r) = 20.5kHz\nFor C = 100pF - F(r) = 650kHz
+Text Notes 2850 6650 0    30   ~ 0
+304-103 (Permanent Magnet Motor):\nPerf Characteristics: For Vdd = 3.0V, I = 73 mA\nPWM Calcs:\nL = 600uH\nFor C = 100nF - F(r) = 20.5kHz\nFor C = 100pF - F(r) = 650kHz\n\nNOTE: If M1 substituted with brushless motor,\nPWM is NOT permitted.
 $Comp
 L GND #PWR022
 U 1 1 4FFDABD1
-P 1000 5550
-F 0 "#PWR022" H 1000 5550 30  0001 C CNN
-F 1 "GND" H 1000 5480 30  0001 C CNN
-	1    1000 5550
+P 1050 4950
+F 0 "#PWR022" H 1050 4950 30  0001 C CNN
+F 1 "GND" H 1050 4880 30  0001 C CNN
+	1    1050 4950
 	-1   0    0    -1  
 $EndComp
 Text Notes 850  1150 0    30   ~ 0
@@ -616,15 +613,15 @@ F 1 "VMCU" H 14250 990 30  0000 C CNN
 	1    14250 900 
 	1    0    0    -1  
 $EndComp
-Text GLabel 2800 1550 2    45   Output ~ 0
+Text GLabel 2850 1550 2    45   Output ~ 0
 BAT_CHG_STAT
 $Comp
 L ZENER D1
 U 1 1 4FFC6FB6
-P 1850 8450
-F 0 "D1" V 1950 8550 50  0000 C CNN
-F 1 "PZU3.3B1" V 1750 8650 50  0000 C CNN
-	1    1850 8450
+P 1600 8000
+F 0 "D1" V 1700 8100 50  0000 C CNN
+F 1 "PZU3.3B1" H 1600 7900 50  0000 C CNN
+	1    1600 8000
 	0    1    -1   0   
 $EndComp
 $Comp
@@ -639,70 +636,70 @@ $EndComp
 $Comp
 L +5V_USB #PWR5
 U 1 1 4FFB1F59
-P 750 900
-F 0 "#PWR5" H 750 1030 20  0001 C CNN
-F 1 "+5V_USB" H 750 1025 30  0000 C CNN
-	1    750  900 
+P 750 850
+F 0 "#PWR5" H 750 980 20  0001 C CNN
+F 1 "+5V_USB" H 750 975 30  0000 C CNN
+	1    750  850 
 	1    0    0    -1  
 $EndComp
 $Comp
 L R R11
 U 1 1 4FFB173C
-P 4900 2700
-F 0 "R11" V 4800 2700 50  0000 C CNN
-F 1 "100K" V 4905 2700 50  0000 C CNN
-	1    4900 2700
+P 4900 2650
+F 0 "R11" V 4800 2650 50  0000 C CNN
+F 1 "100K" V 4905 2650 50  0000 C CNN
+	1    4900 2650
 	1    0    0    -1  
 $EndComp
-Text GLabel 6900 4950 0    45   Output ~ 0
+Text GLabel 6550 4950 0    45   Output ~ 0
 PIEZO_DRIVE
 $Comp
 L DIODESCH D2
 U 1 1 4FFACA9E
-P 1400 8450
-F 0 "D2" V 1500 8375 50  0000 C CNN
-F 1 "1PS79SB30" H 1400 8575 50  0000 C CNN
-	1    1400 8450
+P 1250 8000
+F 0 "D2" V 1350 8100 50  0000 C CNN
+F 1 "1PS79SB30" H 1250 7900 50  0000 C CNN
+	1    1250 8000
 	0    1    -1   0   
 $EndComp
 $Comp
 L GND #PWR028
 U 1 1 4FFACA6E
-P 950 8900
-F 0 "#PWR028" H 950 8900 30  0001 C CNN
-F 1 "GND" H 950 8830 30  0001 C CNN
-	1    950  8900
+P 750 8600
+F 0 "#PWR028" H 750 8600 30  0001 C CNN
+F 1 "GND" H 750 8530 30  0001 C CNN
+	1    750  8600
 	-1   0    0    -1  
 $EndComp
-Text Notes 500  7550 0    80   ~ 16
+Text Notes 500  7250 0    80   ~ 16
 Piezoelectric Diaphragm
-Text Notes 500  9300 0    80   ~ 16
+Text Notes 500  9050 0    80   ~ 16
 Display - Sharp Microelectronics Memory LCD
 Text GLabel 6150 9000 0    45   Output ~ 0
 MLCD_DISP
 Text GLabel 6150 7900 0    45   Output ~ 0
 MLCD_VDD
-Text GLabel 3550 10100 2    45   Input ~ 0
+Text GLabel 3550 9900 2    45   Input ~ 0
 MLCD_VDD
-Text GLabel 3550 10000 2    45   Input ~ 0
+Text GLabel 3550 9800 2    45   Input ~ 0
 MLCD_DISP
 Text GLabel 6150 7700 0    45   Output ~ 0
 MLCD_SSEL
-Text GLabel 3550 9800 2    45   Input ~ 0
+Text GLabel 3550 9600 2    45   Input ~ 0
 MLCD_SSEL
 Text GLabel 6150 7800 0    45   Output ~ 0
 MLCD_SCK
-Text GLabel 1750 7800 2    45   Input ~ 0
+Text GLabel 1550 7400 2    45   Input ~ 0
 PIEZO_DRIVE
-Text GLabel 3550 9700 2    45   Input ~ 0
+Text GLabel 3550 9500 2    45   Input ~ 0
 MLCD_MOSI
 Text GLabel 6150 8000 0    45   Output ~ 0
 MLCD_MOSI
-Text GLabel 3550 9900 2    45   Input ~ 0
+Text GLabel 3550 9700 2    45   Input ~ 0
 MLCD_EXTCOM
 Text GLabel 6150 8900 0    45   Output ~ 0
 MLCD_EXTCOM
-NoConn ~ 5400 2500
+NoConn ~ 5400 2450
 NoConn ~ 5400 1200
 $Comp
 L TPS782XXDRV U4
@@ -715,49 +712,49 @@ F 1 "TPS78230DRVT" H 5850 750 50  0000 C CNN
 $EndComp
 Text Notes 500  600  0    80   ~ 16
 USB Battery Charger and VMCU Regulator
-Text Notes 500  4050 0    80   ~ 16
+Text Notes 500  3400 0    80   ~ 16
 LiPo Fuel Gauge
 $Comp
 L VMCU #PWR029
 U 1 1 4FFA2368
-P 13100 1000
-F 0 "#PWR029" H 13150 1030 20  0001 C CNN
-F 1 "VMCU" H 13100 1090 30  0000 C CNN
-	1    13100 1000
+P 13100 850
+F 0 "#PWR029" H 13150 880 20  0001 C CNN
+F 1 "VMCU" H 13100 940 30  0000 C CNN
+	1    13100 850 
 	1    0    0    -1  
 $EndComp
-Text Notes 1550 5900 0    30   ~ 0
-- For reference designs, recommendations and app notes\nsee: http://bit.ly/Mey1VI and\nhttp://www.precisionmicrodrives.com/application-notes-technical-guides\n\n- Consider using X2Y 6R3X14W104MV4T for bypass\nfiltering (Farnell code: 1886132)\nDetails here: http://johansondielectrics.com/x2y-products.html
+Text Notes 1550 5350 0    30   ~ 0
+- For reference designs, recommendations and app notes\nsee: http://bit.ly/Mey1VI and\nhttp://www.precisionmicrodrives.com/application-notes-technical-guides\n- Consider using X2Y 6R3X14W104MV4T for bypass\nfiltering (Farnell code: 1886132)\nDetails here: http://johansondielectrics.com/x2y-products.html
 $Comp
 L C C30
 U 1 1 4FFA1FB2
-P 5200 2700
-F 0 "C30" H 5250 2800 50  0000 L CNN
-F 1 "2U2" H 5250 2600 50  0000 L CNN
-	1    5200 2700
+P 5200 2650
+F 0 "C30" H 5250 2750 50  0000 L CNN
+F 1 "2U2" H 5250 2550 50  0000 L CNN
+	1    5200 2650
 	1    0    0    -1  
 $EndComp
 $Comp
 L C C28
 U 1 1 4FFA1FB1
-P 6600 2650
-F 0 "C28" H 6650 2750 50  0000 L CNN
-F 1 "2U2" H 6650 2550 50  0000 L CNN
-	1    6600 2650
+P 6600 2600
+F 0 "C28" H 6650 2700 50  0000 L CNN
+F 1 "2U2" H 6650 2500 50  0000 L CNN
+	1    6600 2600
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR030
 U 1 1 4FFA1FB0
-P 6350 3100
-F 0 "#PWR030" H 6350 3100 30  0001 C CNN
-F 1 "GND" H 6350 3030 30  0001 C CNN
-	1    6350 3100
+P 6350 3050
+F 0 "#PWR030" H 6350 3050 30  0001 C CNN
+F 1 "GND" H 6350 2980 30  0001 C CNN
+	1    6350 3050
 	1    0    0    -1  
 $EndComp
-Text GLabel 1100 6250 0    45   Input ~ 0
+Text GLabel 1100 5800 0    45   Input ~ 0
 VIB_MOTOR_EN
-Text Notes 500  5950 0    80   ~ 16
+Text Notes 500  5400 0    80   ~ 16
 Vibratory Motor
 $Comp
 L VMCU #PWR031
@@ -782,35 +779,35 @@ VIB_MOTOR_EN
 $Comp
 L C C13
 U 1 1 4FF99A01
-P 2500 6650
-F 0 "C13" H 2550 6750 50  0000 L CNN
-F 1 "100N" H 2550 6550 50  0000 L CNN
-	1    2500 6650
+P 2800 6100
+F 0 "C13" H 2850 6200 50  0000 L CNN
+F 1 "100N" H 2850 6000 50  0000 L CNN
+	1    2800 6100
 	1    0    0    -1  
 $EndComp
 $Comp
 L DIODESCH D3
 U 1 1 4FF999D2
-P 3450 6650
-F 0 "D3" V 3550 6575 50  0000 C CNN
-F 1 "1PS79SB30" H 3450 6775 50  0000 C CNN
-	1    3450 6650
+P 3750 6100
+F 0 "D3" V 3850 6025 50  0000 C CNN
+F 1 "1PS79SB30" H 3750 6225 50  0000 C CNN
+	1    3750 6100
 	0    1    -1   0   
 $EndComp
 $Comp
 L MOTOR M1
 U 1 1 4FF99833
-P 2950 6650
-F 0 "M1" H 3150 6750 50  0000 R CNN
-F 1 "304-103" H 3000 6500 50  0000 L CNN
-	1    2950 6650
+P 3250 6100
+F 0 "M1" H 3450 6200 50  0000 R CNN
+F 1 "304-103" H 3300 5950 50  0000 L CNN
+	1    3250 6100
 	1    0    0    -1  
 $EndComp
-Text GLabel 6900 5250 0    45   Input ~ 0
+Text GLabel 6550 5250 0    45   Input ~ 0
 TR_PUSHER
-Text GLabel 6900 5150 0    45   Input ~ 0
+Text GLabel 6550 5150 0    45   Input ~ 0
 CR_PUSHER
-Text GLabel 6900 5050 0    45   Input ~ 0
+Text GLabel 6550 5050 0    45   Input ~ 0
 BR_PUSHER
 Text GLabel 6150 9850 0    45   Input ~ 0
 BL_PUSHER
@@ -822,28 +819,28 @@ Text GLabel 14050 3800 0    45   Output ~ 0
 BL_PUSHER
 Text GLabel 14050 2600 0    45   Output ~ 0
 BR_PUSHER
-Text GLabel 2250 4450 2    45   Input ~ 0
+Text GLabel 2300 3800 2    45   Input ~ 0
 VBATT_SENSE
-Text GLabel 2250 5000 2    45   Input ~ 0
+Text GLabel 2300 4350 2    45   Input ~ 0
 FG_I2C_SCL
 $Comp
 L R R12
 U 1 1 4FF90147
-P 5150 7150
-F 0 "R12" V 5050 7150 50  0000 C CNN
-F 1 "4K7" V 5155 7150 50  0000 C CNN
-	1    5150 7150
+P 5650 7150
+F 0 "R12" V 5550 7150 50  0000 C CNN
+F 1 "4K7" V 5655 7150 50  0000 C CNN
+	1    5650 7150
 	1    0    0    -1  
 $EndComp
-Text GLabel 2250 4900 2    45   BiDi ~ 0
+Text GLabel 2300 4250 2    45   BiDi ~ 0
 FG_I2C_SDA
 $Comp
 L R R13
 U 1 1 4FF8E96F
-P 5450 7150
-F 0 "R13" V 5350 7150 50  0000 C CNN
-F 1 "4K7" V 5455 7150 50  0000 C CNN
-	1    5450 7150
+P 5950 7150
+F 0 "R13" V 5850 7150 50  0000 C CNN
+F 1 "4K7" V 5955 7150 50  0000 C CNN
+	1    5950 7150
 	1    0    0    -1  
 $EndComp
 Text GLabel 14050 1400 0    45   Output ~ 0
@@ -865,6 +862,7 @@ U 1 1 4FF766AF
 P 9250 1600
 F 0 "C18" H 9050 1700 50  0000 L CNN
 F 1 "4U7" H 9050 1500 50  0000 L CNN
+F 4 "10VDC" H 9000 1600 50  0000 C CNN "Voltage"
 	1    9250 1600
 	-1   0    0    -1  
 $EndComp
@@ -874,6 +872,7 @@ U 1 1 4FF7668C
 P 9600 1850
 F 0 "C16" V 9550 1625 50  0000 L CNN
 F 1 "1U" V 9700 1650 50  0000 L CNN
+F 4 "10VDC" V 9800 1700 50  0000 C CNN "Voltage"
 	1    9600 1850
 	0    -1   1    0   
 $EndComp
@@ -884,23 +883,23 @@ OPTIONAL:\n- USB_PU_EN Resistor \nONLY required for LOW speed USB\n- USB_ID requ
 $Comp
 L +5V_USB #PWR7
 U 1 1 4FF57A43
-P 9850 1000
-F 0 "#PWR7" H 9850 1130 20  0001 C CNN
-F 1 "+5V_USB" H 9850 1125 30  0000 C CNN
-	1    9850 1000
+P 9850 850
+F 0 "#PWR7" H 9850 980 20  0001 C CNN
+F 1 "+5V_USB" H 9850 975 30  0000 C CNN
+	1    9850 850 
 	1    0    0    -1  
 $EndComp
-Text Notes 11250 5000 0    80   ~ 16
+Text Notes 11200 5000 0    80   ~ 16
 Low Frequency Clock
-Text Notes 11250 3400 0    80   ~ 16
+Text Notes 11200 3400 0    80   ~ 16
 High Frequency Clock
 Text GLabel 13050 3600 2    45   Input ~ 0
 HFXO_P
 Text GLabel 13050 4300 2    45   Output ~ 0
 HFXO_N
-Text GLabel 6900 6350 0    45   Output ~ 0
+Text GLabel 6550 6350 0    45   Output ~ 0
 HFXO_P
-Text GLabel 6900 6450 0    45   Input ~ 0
+Text GLabel 6550 6450 0    45   Input ~ 0
 HFXO_N
 $Comp
 L C C7
@@ -922,42 +921,40 @@ F 1 "GND" H 11450 4630 30  0001 C CNN
 $EndComp
 Text Notes 13500 8800 0    80   ~ 16
 USB MICRO AB Connection
-Text Notes 2250 10950 0    30   ~ 0
-C12 &C13 100N MINIMUM -\nMay be 1U for convenience.
 $Comp
 L C C20
 U 1 1 4FF44DB3
-P 3000 10500
-F 0 "C20" H 2800 10600 50  0000 L CNN
-F 1 "100N" H 2750 10400 50  0000 L CNN
-	1    3000 10500
+P 3000 10300
+F 0 "C20" H 2800 10400 50  0000 L CNN
+F 1 "100N" H 2750 10200 50  0000 L CNN
+	1    3000 10300
 	-1   0    0    -1  
 $EndComp
 $Comp
 L C C27
 U 1 1 4FF44DB2
-P 2600 10500
-F 0 "C27" H 2400 10600 50  0000 L CNN
-F 1 "100N" H 2350 10400 50  0000 L CNN
-	1    2600 10500
+P 2600 10300
+F 0 "C27" H 2400 10400 50  0000 L CNN
+F 1 "100N" H 2350 10200 50  0000 L CNN
+	1    2600 10300
 	-1   0    0    -1  
 $EndComp
 $Comp
 L C C21
 U 1 1 4FF44DB1
-P 2200 10500
-F 0 "C21" H 2000 10600 50  0000 L CNN
-F 1 "1U" H 2050 10400 50  0000 L CNN
-	1    2200 10500
+P 2200 10300
+F 0 "C21" H 2000 10400 50  0000 L CNN
+F 1 "1U" H 2050 10200 50  0000 L CNN
+	1    2200 10300
 	-1   0    0    -1  
 $EndComp
 $Comp
 L GND #PWR035
 U 1 1 4FF44DB0
-P 1800 11100
-F 0 "#PWR035" H 1800 11100 30  0001 C CNN
-F 1 "GND" H 1800 11030 30  0001 C CNN
-	1    1800 11100
+P 1800 10900
+F 0 "#PWR035" H 1800 10900 30  0001 C CNN
+F 1 "GND" H 1800 10830 30  0001 C CNN
+	1    1800 10900
 	-1   0    0    -1  
 $EndComp
 $Comp
@@ -1067,15 +1064,16 @@ F 1 "10K" V 1055 2300 50  0000 C CNN
 	1    1050 2300
 	1    0    0    -1  
 $EndComp
-Text Notes 1250 2450 0    30   ~ 0
-R1\n10K = approx. 100mA charge current\n5K = approx. 200mA charge current
+Text Notes 1250 2450 0    39   ~ 0
+R10\n10K = approx. 100mA charge current\n5K = approx. 200mA charge current
 $Comp
 L C C22
 U 1 1 4FCF9920
-P 750 1950
-F 0 "C22" H 800 2050 50  0000 L CNN
-F 1 "4U7" H 800 1850 50  0000 L CNN
-	1    750  1950
+P 750 2000
+F 0 "C22" H 800 2100 50  0000 L CNN
+F 1 "4U7" H 800 1900 50  0000 L CNN
+F 4 "10VDC" H 600 1900 50  0000 C CNN "Voltage"
+	1    750  2000
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1088,21 +1086,12 @@ F 1 "GND" H 750 2680 30  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L C C31
-U 1 1 4FCF90BB
-P 2900 1950
-F 0 "C31" H 2950 2050 50  0000 L CNN
-F 1 "4U7" H 2950 1850 50  0000 L CNN
-	1    2900 1950
-	1    0    0    -1  
-$EndComp
-$Comp
 L +5V_USB #PWR6
 U 1 1 4FCF624F
-P 4400 900
-F 0 "#PWR6" H 4400 1030 20  0001 C CNN
-F 1 "+5V_USB" H 4400 1025 30  0000 C CNN
-	1    4400 900 
+P 4400 850
+F 0 "#PWR6" H 4400 980 20  0001 C CNN
+F 1 "+5V_USB" H 4400 975 30  0000 C CNN
+	1    4400 850 
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1191,7 +1180,7 @@ Text GLabel 14950 7900 0    45   Output ~ 0
 DBG_SWCLK
 Text GLabel 14950 8050 0    45   Input ~ 0
 DBG_SWO
-Text GLabel 14950 8350 0    45   Output ~ 0
+Text GLabel 14950 8200 0    45   Output ~ 0
 MCUDBG_RESET
 Text GLabel 9050 1300 0    45   Input ~ 0
 MCUDBG_RESET
@@ -1353,8 +1342,8 @@ F 1 "WE-742792641" V 15200 9250 40  0000 C CNN
 	1    15250 9250
 	0    -1   -1   0   
 $EndComp
-Text Notes 3200 11100 0    30   ~ 0
-EXTMODE:\nWhen <H>, EXTCOMIN signal is enable.\nWhen <L> ,serial input flag is enable.
+Text Notes 3400 10300 0    30   ~ 0
+MEMORY LCD NOTES\n--------------------------\nEXTMODE:\nWhen <H>, EXTCOMIN signal is enable.\nWhen <L> ,serial input flag is enable.\n\nC12 &C13 100N MINIMUM -\nMay be 1U for convenience.
 $Comp
 L C C1
 U 1 1 509921C5
@@ -1460,8 +1449,6 @@ NoConn ~ 6350 6900
 NoConn ~ 6350 7000
 NoConn ~ 6350 7200
 NoConn ~ 6350 7300
-Text Notes 2250 6350 0    30   ~ 0
-Perf Characteristics: For Vdd = 3.0V, I = 73 mA
 $Comp
 L MOS_P_6LEAD Q2
 U 1 1 50F58D02
@@ -1475,55 +1462,56 @@ $EndComp
 $Comp
 L MOS_N_6LEAD Q1
 U 1 1 50F5A0F1
-P 1750 6950
-F 0 "Q1" H 2050 7250 50  0000 R CNN
-F 1 "FK6K02010L" H 1770 6735 50  0000 C CNN
-F 2 "WSMini6-F1-B" H 1662 7133 50  0001 C CNN
-	1    1750 6950
+P 2050 6500
+F 0 "Q1" H 2350 6800 50  0000 R CNN
+F 1 "FK6K02010L" H 2070 6285 50  0000 C CNN
+F 2 "WSMini6-F1-B" H 1962 6683 50  0001 C CNN
+	1    2050 6500
 	-1   0    0    -1  
 $EndComp
-Text GLabel 3600 7950 2    45   Input ~ 0
+Text GLabel 3850 7650 2    45   Input ~ 0
 BACKLIGHT_EN
 $Comp
 L LED LED1
 U 1 1 50F5B1EE
-P 2600 8300
-F 0 "LED1" H 2600 8400 50  0000 C CNN
-F 1 "ASMT-CW00" H 2600 8150 50  0000 C CNN
-	1    2600 8300
+P 3150 8000
+F 0 "LED1" H 3150 8100 50  0000 C CNN
+F 1 "ASMT-CW00" H 3150 7850 50  0000 C CNN
+	1    3150 8000
 	0    -1   1    0   
 $EndComp
 $Comp
 L TPS782XXDRV U5
 U 1 1 50F7E80D
-P 5800 2400
-F 0 "U5" H 5650 2650 60  0000 C CNN
-F 1 "TPS78230DRVT" H 5850 2050 50  0000 C CNN
-	1    5800 2400
+P 5800 2350
+F 0 "U5" H 5650 2600 60  0000 C CNN
+F 1 "TPS78230DRVT" H 5850 2000 50  0000 C CNN
+	1    5800 2350
 	1    0    0    -1  
 $EndComp
 $Comp
 L CONN_BAT J3
 U 1 1 50F82304
-P 3550 2450
-F 0 "J3" H 3750 2500 60  0000 C CNN
-F 1 "AHCL" H 3800 2400 50  0000 C CNN
-	1    3550 2450
+P 3600 2600
+F 0 "J3" H 3600 2750 60  0000 C CNN
+F 1 "ACHLR-02V-S" H 3600 2450 50  0000 C CNN
+F 4 "ACHR-02V-S" H 3600 2600 60  0001 C CNN "Alt Value"
+	1    3600 2600
 	1    0    0    -1  
 $EndComp
 $Comp
 L MEMORY_LCD_CONN J2
 U 1 1 50F84C3F
-P 1250 10050
-F 0 "J2" H 1200 10650 60  0000 C CNN
-F 1 "FH19SC-10S-0.5SH(05)" H 1400 9450 60  0000 C CNN
-	1    1250 10050
+P 1250 9850
+F 0 "J2" H 1200 10450 60  0000 C CNN
+F 1 "FH19SC-10S-0.5SH(05)" H 1400 9250 60  0000 C CNN
+	1    1250 9850
 	-1   0    0    -1  
 $EndComp
-Text Notes 2500 7650 0    30   ~ 0
-Major experimenting required with Hesaglas (0.3 - 0.5mm cast\nacrylic) + laser engraving to construct a planar lightguide\nas described by Idé et al:
+Text Notes 2950 7350 0    30   ~ 0
+Major experimenting required with Hesaglas (0.3 - 0.5mm cast\nacrylic) + laser engraving to construct a planar lightguide as\ndescribed by Idé et al.\n
 Text Notes 450  11425 0    50   ~ 0
-CHANGES: Krenv1.3 used to realign component numbering (Except P1-P5 & P7) with module XY PCB location.
+CHANGES: Accelerometer added. Fuel Gauge IC updated to latest (smaller) model. Backlight LED now switched directly by MCU.
 Text Notes 13500 10850 0    60   ~ 12
 © Hamish Mead 2012-2013 - Licensed CC-BY-SA
 Text Notes 12315 10850 0    60   ~ 12
@@ -1534,47 +1522,148 @@ NoConn ~ 6350 8700
 $Comp
 L MAX17048G+ U6
 U 1 1 5112470D
-P 1600 4900
-F 0 "U6" H 1450 5150 50  0000 C CNN
-F 1 "MAX17048G+" H 1700 4450 50  0000 C CNN
-	1    1600 4900
+P 1650 4250
+F 0 "U6" H 1500 4500 50  0000 C CNN
+F 1 "MAX17048G+" H 1750 3800 50  0000 C CNN
+	1    1650 4250
 	1    0    0    -1  
 $EndComp
 $Comp
 L GND #PWR055
 U 1 1 511250C2
-P 3800 5550
-F 0 "#PWR055" H 3800 5550 30  0001 C CNN
-F 1 "GND" H 3800 5480 30  0001 C CNN
-	1    3800 5550
+P 3800 4950
+F 0 "#PWR055" H 3800 4950 30  0001 C CNN
+F 1 "GND" H 3800 4880 30  0001 C CNN
+	1    3800 4950
 	-1   0    0    -1  
 $EndComp
-NoConn ~ 2100 4800
+NoConn ~ 2150 4150
 $Comp
 L VMCU #PWR056
 U 1 1 51128CA3
-P 5450 6750
-F 0 "#PWR056" H 5500 6780 20  0001 C CNN
-F 1 "VMCU" H 5450 6840 30  0000 C CNN
-	1    5450 6750
+P 5950 6750
+F 0 "#PWR056" H 6000 6780 20  0001 C CNN
+F 1 "VMCU" H 5950 6840 30  0000 C CNN
+	1    5950 6750
 	1    0    0    -1  
 $EndComp
-Text Notes 2900 8750 0    30   ~ 0
-Drive LED using\n<GPIO_Px_CTRL DRIVEMODE = STANDARD> and PWM.\nValue of R to be confirmed.\nMax current for ASMT-CW00 is 10mA. VF varies\nfrom 2.55V (min) - 3.15V (max).\nAt 3V VMCU +  Standard drive level, with draw of 10mA,\nGPIO voltage drops to approx 2.7V.\nThis should be sufficient to prevent LED drawing 
+Text Notes 3350 8350 0    30   ~ 0
+Drive LED using <GPIO_Px_CTRL DRIVEMODE =\nSTANDARD> + PWM.\n- Value of R to be confirmed.\n- Max current for ASMT-CW00 is 10mA.\n- VF varies from 2.55V (min) - 3.15V (max).\n- At 3V VMCU +  Standard drive level,\nwith draw of 10mA, GPIO voltage drops\nto approx 2.7V. As a result, LED should \nnot be able to draw excess current.
 $Comp
 L R R15
 U 1 1 51129D4F
-P 3150 7950
-F 0 "R15" V 3250 7950 50  0000 C CNN
-F 1 "10R" V 3155 7950 50  0000 C CNN
-	1    3150 7950
+P 3500 7650
+F 0 "R15" V 3600 7650 50  0000 C CNN
+F 1 "10R" V 3505 7650 50  0000 C CNN
+	1    3500 7650
 	0    -1   -1   0   
 $EndComp
-NoConn ~ 7100 6250
+NoConn ~ 6750 6250
+Text Notes 4150 4900 0    30   ~ 0
+RES PINS - May be connected to ground or left unconnected.\nNC PINS - Not internally connected.
+$Comp
+L GND #PWR057
+U 1 1 5112CB15
+P 3150 8600
+F 0 "#PWR057" H 3150 8600 30  0001 C CNN
+F 1 "GND" H 3150 8530 30  0001 C CNN
+	1    3150 8600
+	-1   0    0    -1  
+$EndComp
+$Comp
+L ADXL362 U2
+U 1 1 5113A36F
+P 4450 4300
+F 0 "U2" H 4200 4800 50  0000 C CNN
+F 1 "ADXL362" H 4600 3800 50  0000 C CNN
+	1    4450 4300
+	1    0    0    -1  
+$EndComp
+Text Notes 5900 3450 0    60   ~ 12
+------------>>\nGENERAL NOTES\n------------>>
+Text Notes 3000 3400 0    80   ~ 16
+Accelerometer
+$Comp
+L C C23
+U 1 1 5113B213
+P 3500 4350
+F 0 "C23" H 3450 4250 50  0000 R CNN
+F 1 "100N" H 3450 4450 50  0000 R CNN
+	1    3500 4350
+	-1   0    0    1   
+$EndComp
+$Comp
+L C C24
+U 1 1 5113B219
+P 3150 4350
+F 0 "C24" H 3100 4250 50  0000 R CNN
+F 1 "100N" H 3100 4450 50  0000 R CNN
+	1    3150 4350
+	-1   0    0    1   
+$EndComp
+Text GLabel 6150 8200 0    45   Output ~ 0
+ACCEL_MOSI
+Text GLabel 6150 8500 0    45   Output ~ 0
+ACCEL_~CS~
+Text GLabel 6150 8400 0    45   Output ~ 0
+ACCEL_SCLK
+Text GLabel 6150 8300 0    45   Input ~ 0
+ACCEL_MISO
+Text GLabel 6150 8800 0    45   Input ~ 0
+ACCEL_INT
+Text GLabel 5150 4550 2    45   Output ~ 0
+ACCEL_INT
+Text GLabel 5150 4350 2    45   Output ~ 0
+ACCEL_MISO
+Text GLabel 5150 4450 2    45   Output ~ 0
+ACCEL_~CS~
+Text GLabel 5150 4150 2    45   Output ~ 0
+ACCEL_SCLK
+Text GLabel 5150 4250 2    45   Input ~ 0
+ACCEL_MOSI
+$Comp
+L VMCU #PWR058
+U 1 1 5113B6A6
+P 3150 3700
+F 0 "#PWR058" H 3200 3730 20  0001 C CNN
+F 1 "VMCU" H 3150 3790 30  0000 C CNN
+	1    3150 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L VMCU #PWR059
+U 1 1 5113B6AC
+P 3500 3700
+F 0 "#PWR059" H 3550 3730 20  0001 C CNN
+F 1 "VMCU" H 3500 3790 30  0000 C CNN
+	1    3500 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR060
+U 1 1 5113C4AB
+P 2300 4950
+F 0 "#PWR060" H 2300 4950 30  0001 C CNN
+F 1 "GND" H 2300 4880 30  0001 C CNN
+	1    2300 4950
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 4950 4650
+NoConn ~ 6350 8600
+$Comp
+L R R17
+U 1 1 5116125A
+P 1550 6150
+F 0 "R17" V 1450 6150 50  0000 C CNN
+F 1 "100K" V 1550 6145 50  0000 C CNN
+	1    1550 6150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 3950 4250
 Wire Wire Line
-	2050 6850 2100 6850
+	2350 6400 2400 6400
 Wire Wire Line
-	2100 6850 2100 7000
+	2400 6400 2400 6550
 Wire Wire Line
 	3600 1750 3650 1750
 Wire Wire Line
@@ -1679,50 +1768,41 @@ Wire Wire Line
 Wire Wire Line
 	11950 3600 13050 3600
 Wire Wire Line
-	5350 2150 5350 1900
+	3400 2300 3200 2300
+Connection ~ 3200 2300
 Wire Wire Line
-	5350 1900 5250 1900
-Connection ~ 4750 1900
-Wire Wire Line
-	4750 1900 4850 1900
-Wire Wire Line
-	3650 2200 3200 2200
-Connection ~ 3200 2200
-Wire Wire Line
-	3200 1700 3200 2400
+	3200 1700 3200 2550
 Connection ~ 9050 2850
 Wire Wire Line
 	9050 2800 9050 3050
-Connection ~ 2200 6900
+Connection ~ 2500 6450
 Wire Wire Line
-	2200 6900 2200 6800
+	2500 6450 2500 6350
 Connection ~ 2900 2650
 Connection ~ 2650 2650
 Wire Wire Line
-	2650 2650 3200 2650
+	2650 2650 3350 2650
 Wire Wire Line
-	3200 2400 3300 2400
+	3200 2550 3350 2550
 Wire Wire Line
 	4750 1000 5400 1000
 Wire Notes Line
-	500  3900 5800 3900
-Wire Notes Line
 	13450 3250 500  3250
-Connection ~ 4900 2400
+Connection ~ 4900 2350
 Wire Wire Line
-	4900 2450 4900 2400
+	4900 2400 4900 2350
 Wire Wire Line
-	5200 3000 5200 2900
+	5200 2950 5200 2850
 Wire Wire Line
-	5200 2500 5200 2300
+	5200 2450 5200 2250
 Wire Wire Line
-	1100 6250 1650 6250
+	1100 5800 1950 5800
 Wire Wire Line
-	2500 6400 3450 6400
-Connection ~ 2950 6400
-Connection ~ 2950 6900
+	2800 5800 3750 5800
+Connection ~ 3250 5800
+Connection ~ 3250 6450
 Wire Wire Line
-	3450 6900 3450 6850
+	3750 6450 3750 6300
 Wire Wire Line
 	6150 10950 6350 10950
 Wire Wire Line
@@ -1741,9 +1821,7 @@ Wire Wire Line
 	14750 9500 14750 9150
 Connection ~ 3600 1700
 Wire Wire Line
-	2200 10200 2200 10300
-Wire Wire Line
-	14250 7750 14250 8500
+	2200 10000 2200 10100
 Wire Wire Line
 	14050 2600 14950 2600
 Wire Wire Line
@@ -1763,21 +1841,21 @@ Wire Wire Line
 Wire Wire Line
 	2650 1400 2650 1950
 Wire Wire Line
-	3700 3100 3700 3150
+	1550 3000 1550 3050
 Wire Wire Line
-	3700 3150 3950 3150
+	1550 3050 1800 3050
 Wire Wire Line
-	3950 3150 3950 3000
+	1800 3050 1800 2900
 Wire Wire Line
-	750  900  750  1750
+	750  850  750  1800
 Wire Wire Line
 	8350 1850 8350 1900
 Wire Wire Line
-	1600 9600 3550 9600
+	1600 9400 3550 9400
 Wire Wire Line
-	4900 7600 6350 7600
+	5400 7600 6350 7600
 Wire Wire Line
-	4900 7500 6350 7500
+	5400 7500 6350 7500
 Connection ~ 750  2650
 Connection ~ 1200 2100
 Wire Wire Line
@@ -1790,66 +1868,66 @@ Wire Wire Line
 	2250 1700 2250 1800
 Wire Wire Line
 	2250 1800 2150 1800
-Connection ~ 1400 8050
+Connection ~ 1250 7650
 Wire Wire Line
-	1400 8250 1400 8050
+	1250 7800 1250 7650
 Wire Wire Line
-	1850 8050 1850 8250
+	1600 7650 1600 7800
 Wire Wire Line
-	950  8050 1850 8050
+	750  7650 1600 7650
 Wire Wire Line
 	6250 1000 6600 1000
 Wire Wire Line
 	750  1700 1250 1700
 Wire Wire Line
-	7100 4950 6900 4950
+	6750 4950 6550 4950
 Wire Wire Line
-	1100 7800 950  7800
+	900  7400 750  7400
 Wire Wire Line
 	6350 7900 6150 7900
 Wire Wire Line
 	6150 7700 6350 7700
 Wire Wire Line
 	6150 8000 6350 8000
-Connection ~ 6350 2600
+Connection ~ 6350 2550
 Wire Wire Line
-	6350 2600 6250 2600
+	6350 2550 6250 2550
 Connection ~ 6350 1300
 Wire Wire Line
 	6350 1300 6250 1300
-Connection ~ 6600 2300
+Connection ~ 6600 2250
 Wire Wire Line
-	6600 3000 6600 2850
-Connection ~ 6350 3000
+	6600 2950 6600 2800
+Connection ~ 6350 2950
 Wire Wire Line
-	6250 2500 6350 2500
+	6250 2450 6350 2450
 Connection ~ 5100 1000
 Wire Wire Line
 	6250 1100 6350 1100
 Wire Notes Line
-	4250 7400 500  7400
+	4600 7100 500  7100
 Wire Notes Line
-	4250 9100 500  9100
+	4600 8900 500  8900
 Connection ~ 4400 1700
 Wire Wire Line
 	4400 1700 4400 1600
 Wire Wire Line
 	6150 9850 6350 9850
 Wire Wire Line
-	6900 5150 7100 5150
-Connection ~ 1000 5100
+	6550 5150 6750 5150
+Connection ~ 1050 4450
 Wire Wire Line
-	1000 5100 1150 5100
+	1050 4450 1200 4450
 Wire Wire Line
-	2100 4900 2250 4900
+	2150 4250 2300 4250
 Wire Wire Line
 	9400 1850 9250 1850
 Wire Wire Line
 	9950 1850 9800 1850
 Wire Wire Line
-	1600 9800 3550 9800
+	1600 9600 3550 9600
 Wire Wire Line
-	14950 8350 15100 8350
+	14950 8200 15100 8200
 Wire Wire Line
 	9850 1550 9950 1550
 Wire Notes Line
@@ -1857,9 +1935,9 @@ Wire Notes Line
 Wire Notes Line
 	11150 6400 11150 3250
 Wire Wire Line
-	6900 6350 7100 6350
+	6550 6350 6750 6350
 Wire Wire Line
-	6900 6450 7100 6450
+	6550 6450 6750 6450
 Wire Wire Line
 	11450 3600 11450 4700
 Wire Wire Line
@@ -1867,13 +1945,13 @@ Wire Wire Line
 Connection ~ 11450 3900
 Wire Wire Line
 	14950 7600 15100 7600
-Connection ~ 2600 10100
+Connection ~ 2600 9900
 Wire Wire Line
-	1600 10400 1800 10400
-Connection ~ 3000 10000
+	1600 10200 1800 10200
+Connection ~ 3000 9800
 Wire Wire Line
-	1600 10500 1800 10500
-Connection ~ 1800 10500
+	1600 10300 1800 10300
+Connection ~ 1800 10300
 Connection ~ 14100 9900
 Wire Wire Line
 	6350 10750 6150 10750
@@ -1915,7 +1993,7 @@ Wire Wire Line
 Connection ~ 11650 2350
 Connection ~ 13100 2350
 Wire Wire Line
-	13100 1000 13100 2400
+	13100 850  13100 2400
 Wire Wire Line
 	11850 2850 13100 2850
 Wire Wire Line
@@ -1987,8 +2065,6 @@ Connection ~ 6600 1550
 Wire Wire Line
 	14000 9900 14100 9900
 Wire Wire Line
-	3200 2650 3200 2500
-Wire Wire Line
 	2900 2150 2900 2650
 Wire Wire Line
 	2900 1700 2900 1750
@@ -2003,7 +2079,7 @@ Wire Wire Line
 Wire Wire Line
 	11950 1150 11550 1150
 Wire Wire Line
-	4400 900  4400 1200
+	4400 850  4400 1200
 Wire Wire Line
 	3450 1100 3350 1100
 Wire Wire Line
@@ -2019,7 +2095,7 @@ Wire Wire Line
 Wire Wire Line
 	6150 10850 6350 10850
 Wire Wire Line
-	1600 9900 3550 9900
+	1600 9700 3550 9700
 Wire Wire Line
 	6150 8900 6350 8900
 Wire Notes Line
@@ -2031,35 +2107,35 @@ Wire Wire Line
 Wire Wire Line
 	14250 7450 15100 7450
 Wire Wire Line
-	1600 9700 3550 9700
+	1600 9500 3550 9500
 Wire Wire Line
-	1600 10000 3550 10000
+	1600 9800 3550 9800
 Wire Wire Line
-	1800 10400 1800 11100
+	1800 10200 1800 10900
 Wire Wire Line
-	6350 6050 7100 6050
+	6550 6050 6750 6050
 Wire Wire Line
 	9850 1750 9950 1750
 Wire Wire Line
-	9850 1000 9850 1750
+	9850 850  9850 1750
 Connection ~ 9850 1550
 Wire Wire Line
-	1150 4800 700  4800
+	1200 4150 750  4150
 Wire Wire Line
-	1000 5200 1150 5200
-Connection ~ 1000 5200
+	1050 4550 1200 4550
+Connection ~ 1050 4550
 Wire Wire Line
-	1150 5000 1000 5000
+	1200 4350 1050 4350
 Wire Wire Line
-	6900 5250 7100 5250
+	6550 5250 6750 5250
 Wire Wire Line
-	6900 5050 7100 5050
+	6550 5050 6750 5050
 Wire Wire Line
 	6150 9950 6350 9950
 Wire Wire Line
 	6350 10150 6150 10150
 Wire Wire Line
-	6600 2450 6600 2300
+	6600 2400 6600 2250
 Wire Wire Line
 	6600 850  6600 1050
 Wire Wire Line
@@ -2075,23 +2151,23 @@ Wire Wire Line
 Wire Wire Line
 	6350 9000 6150 9000
 Wire Wire Line
-	950  8650 950  8900
+	750  8250 750  8600
 Wire Wire Line
-	1400 8650 1400 8750
-Connection ~ 950  8750
+	1250 8200 1250 8350
+Connection ~ 750  8350
 Wire Wire Line
-	1850 8750 1850 8650
+	1600 8350 1600 8200
 Wire Wire Line
-	950  8750 1850 8750
-Connection ~ 1400 8750
+	750  8350 1600 8350
+Connection ~ 1250 8350
 Wire Wire Line
-	950  7800 950  8150
-Connection ~ 950  8050
+	750  7400 750  7750
+Connection ~ 750  7650
 Wire Wire Line
-	6250 2400 6350 2400
+	6250 2350 6350 2350
 Wire Wire Line
-	6350 2400 6350 3100
-Connection ~ 6350 2500
+	6350 2350 6350 3050
+Connection ~ 6350 2450
 Connection ~ 14250 1400
 Connection ~ 14250 2600
 Connection ~ 14250 3800
@@ -2102,7 +2178,7 @@ Wire Wire Line
 	1150 1800 1150 1700
 Connection ~ 1150 1700
 Wire Wire Line
-	750  2150 750  2750
+	750  2200 750  2750
 Wire Wire Line
 	1050 2550 1050 2650
 Wire Wire Line
@@ -2112,11 +2188,11 @@ Wire Wire Line
 Wire Wire Line
 	1200 2650 750  2650
 Wire Wire Line
-	1600 7800 1750 7800
+	1400 7400 1550 7400
 Wire Wire Line
 	2150 1900 2250 1900
 Wire Wire Line
-	4250 3100 4250 3150
+	2100 3000 2100 3050
 Wire Wire Line
 	2650 850  2650 900 
 Wire Wire Line
@@ -2129,7 +2205,7 @@ Wire Wire Line
 Wire Wire Line
 	2250 2150 2300 2150
 Wire Wire Line
-	2800 1550 2650 1550
+	2850 1550 2650 1550
 Connection ~ 2650 1550
 Wire Wire Line
 	14000 10000 14100 10000
@@ -2143,8 +2219,8 @@ Wire Wire Line
 Wire Wire Line
 	14000 9700 15000 9700
 Wire Wire Line
-	1600 10200 3350 10200
-Connection ~ 2200 10200
+	1600 10000 3350 10000
+Connection ~ 2200 10000
 Wire Wire Line
 	3600 1650 3650 1650
 Connection ~ 3600 1650
@@ -2161,41 +2237,36 @@ Wire Wire Line
 	14675 9800 14675 9700
 Connection ~ 14675 9700
 Wire Wire Line
-	15100 8200 14250 8200
-Connection ~ 14250 8200
+	6800 2250 6800 2100
 Wire Wire Line
-	6800 2300 6800 2200
+	3250 6450 3250 6300
+Connection ~ 2800 6450
 Wire Wire Line
-	2950 6900 2950 6850
-Connection ~ 2500 6900
+	2800 5800 2800 5900
 Wire Wire Line
-	2500 6400 2500 6450
+	3250 5900 3250 5800
+Connection ~ 3750 5800
 Wire Wire Line
-	2950 6450 2950 6400
-Connection ~ 3450 6400
+	3750 5600 3750 5900
 Wire Wire Line
-	3450 6150 3450 6450
+	2800 6450 2800 6300
 Wire Wire Line
-	2500 6900 2500 6850
-Wire Wire Line
-	1250 6950 1450 6950
+	1550 6500 1750 6500
 Wire Notes Line
-	500  5800 5800 5800
+	500  5250 5800 5250
 Wire Wire Line
-	6250 2300 6800 2300
+	6250 2250 6800 2250
 Wire Wire Line
-	4900 2950 4900 3000
+	4900 2900 4900 2950
 Wire Wire Line
-	4900 3000 6600 3000
-Connection ~ 5200 3000
-Connection ~ 5200 2300
+	4900 2950 6600 2950
+Connection ~ 5200 2950
+Connection ~ 5200 2250
 Wire Wire Line
-	3200 2500 3300 2500
-Wire Wire Line
-	5050 900  5050 1000
-Connection ~ 5050 1000
+	4950 850  4950 1000
+Connection ~ 4950 1000
 Wire Notes Line
-	4250 5800 4250 11200
+	4600 5250 4600 11200
 Wire Wire Line
 	9050 2350 9050 2400
 Connection ~ 9050 2350
@@ -2203,11 +2274,11 @@ Wire Wire Line
 	14100 9900 14100 10450
 Connection ~ 14575 9500
 Wire Wire Line
-	4750 1000 4750 2300
+	4750 1000 4750 2250
 Wire Wire Line
-	4775 2400 5400 2400
+	4675 2350 5400 2350
 Wire Wire Line
-	4750 2300 5400 2300
+	4750 2250 5400 2250
 Wire Wire Line
 	11450 3600 11550 3600
 Connection ~ 11450 4000
@@ -2221,151 +2292,101 @@ Connection ~ 4750 1700
 Wire Wire Line
 	15900 6200 15700 6200
 Wire Wire Line
-	7100 5950 6900 5950
+	6750 5950 6550 5950
 Wire Wire Line
 	7300 850  7300 2350
 Wire Wire Line
 	8850 2250 8850 2350
 Connection ~ 8850 2350
 Wire Wire Line
-	2050 6900 3450 6900
-Connection ~ 2100 6900
+	2350 6450 3750 6450
+Connection ~ 2400 6450
 Wire Wire Line
-	2100 7000 2050 7000
+	2400 6550 2350 6550
 Wire Wire Line
-	2050 6950 2100 6950
-Connection ~ 2100 6950
+	2350 6500 2400 6500
+Connection ~ 2400 6500
 Wire Wire Line
-	1600 10300 1800 10300
+	1600 10100 1800 10100
 Wire Wire Line
-	1800 10300 1800 10200
-Connection ~ 1800 10200
+	1800 10100 1800 10000
+Connection ~ 1800 10000
 Wire Wire Line
-	5150 7400 5150 7500
+	5650 7400 5650 7500
 Wire Wire Line
-	5450 7400 5450 7600
-Connection ~ 5450 7600
-Connection ~ 5150 7500
+	5950 7400 5950 7600
+Connection ~ 5950 7600
+Connection ~ 5650 7500
 Wire Wire Line
-	2100 5000 2250 5000
+	2150 4350 2300 4350
 Wire Wire Line
-	6900 6150 7100 6150
+	6550 6150 6750 6150
 Wire Wire Line
-	1000 5000 1000 5550
+	1050 4350 1050 4950
 Wire Wire Line
-	700  4900 1150 4900
+	750  4250 1200 4250
 Wire Wire Line
-	2100 5100 2250 5100
+	2150 4450 2300 4450
 Wire Wire Line
-	700  4450 700  5050
-Connection ~ 700  4900
+	750  3800 750  4400
+Connection ~ 750  4250
 Wire Wire Line
-	700  5450 700  5550
+	750  4800 750  4950
 Wire Wire Line
-	2250 4450 700  4450
-Connection ~ 700  4800
+	2300 3800 750  3800
+Connection ~ 750  4150
 Wire Wire Line
-	2600 10100 2600 10300
+	2600 9900 2600 10100
 Wire Wire Line
-	3000 10300 3000 10000
+	3000 10100 3000 9800
 Wire Wire Line
-	3000 10850 3000 10700
+	3000 10650 3000 10500
 Wire Wire Line
-	1800 10850 3000 10850
-Connection ~ 1800 10850
+	1800 10650 3000 10650
+Connection ~ 1800 10650
 Wire Wire Line
-	2600 10700 2600 10850
-Connection ~ 2600 10850
+	2600 10500 2600 10650
+Connection ~ 2600 10650
 Wire Wire Line
-	2200 10700 2200 10850
-Connection ~ 2200 10850
+	2200 10500 2200 10650
+Connection ~ 2200 10650
 Wire Wire Line
-	3350 10200 3350 10100
-Connection ~ 3350 10100
+	3350 10000 3350 9900
+Connection ~ 3350 9900
 Wire Wire Line
-	1600 10100 3550 10100
+	1600 9900 3550 9900
 Wire Notes Line
-	2400 7400 2400 9100
+	2900 7100 2900 8900
 Wire Wire Line
-	5150 6900 5150 6750
+	5650 6900 5650 6750
 Wire Wire Line
-	5450 6900 5450 6750
+	5950 6900 5950 6750
 Wire Wire Line
-	2600 8500 2600 8650
+	3150 8200 3150 8600
 Wire Wire Line
-	1250 6850 1250 7250
+	1550 6400 1550 6800
 Wire Wire Line
-	1650 6250 1650 6600
-Text Notes 4150 5550 0    30   ~ 0
-RES PINS - May be connected to ground or left unconnected.\nNC PINS - Not internally connected.
+	1950 5800 1950 6150
 Wire Wire Line
-	2600 7950 2600 8100
+	3150 7650 3150 7800
 Wire Wire Line
-	2600 7950 2900 7950
+	3150 7650 3250 7650
 Wire Wire Line
-	3400 7950 3600 7950
-$Comp
-L GND #PWR057
-U 1 1 5112CB15
-P 2600 8650
-F 0 "#PWR057" H 2600 8650 30  0001 C CNN
-F 1 "GND" H 2600 8580 30  0001 C CNN
-	1    2600 8650
-	-1   0    0    -1  
-$EndComp
-$Comp
-L ADXL362 U2
-U 1 1 5113A36F
-P 4450 4950
-F 0 "U2" H 4200 5450 50  0000 C CNN
-F 1 "ADXL362" H 4600 4450 50  0000 C CNN
-	1    4450 4950
-	1    0    0    -1  
-$EndComp
-Text Notes 8200 3450 0    60   ~ 12
------->>\nNOTES\n------>>
+	3750 7650 3850 7650
 Wire Notes Line
-	2950 3900 2950 5800
-Text Notes 3000 4050 0    80   ~ 16
-Accelerometer
+	2950 3250 2950 5250
 Wire Wire Line
-	3800 5100 3950 5100
+	3800 4450 3950 4450
 Wire Wire Line
-	3950 5200 3800 5200
-Connection ~ 3800 5200
+	3800 4550 3950 4550
+Connection ~ 3800 4550
 Wire Wire Line
-	3150 5300 3950 5300
-Connection ~ 3800 5300
+	3150 4650 3950 4650
+Connection ~ 3800 4650
 Wire Wire Line
-	3950 4700 3150 4700
+	3950 4050 3150 4050
 Wire Wire Line
-	3500 4600 3950 4600
-$Comp
-L C C23
-U 1 1 5113B213
-P 3500 5000
-F 0 "C23" H 3450 4900 50  0000 R CNN
-F 1 "100N" H 3450 5100 50  0000 R CNN
-	1    3500 5000
-	-1   0    0    1   
-$EndComp
-$Comp
-L C C24
-U 1 1 5113B219
-P 3150 5000
-F 0 "C24" H 3100 4900 50  0000 R CNN
-F 1 "100N" H 3100 5100 50  0000 R CNN
-	1    3150 5000
-	-1   0    0    1   
-$EndComp
-Text GLabel 6150 8200 0    45   Output ~ 0
-ACCEL_MOSI
-Text GLabel 6150 8500 0    45   Output ~ 0
-ACCEL_~CS~
-Text GLabel 6150 8400 0    45   Output ~ 0
-ACCEL_SCLK
-Text GLabel 6150 8300 0    45   Input ~ 0
-ACCEL_MISO
+	3500 3950 3950 3950
 Wire Wire Line
 	6350 8400 6150 8400
 Wire Wire Line
@@ -2374,95 +2395,78 @@ Wire Wire Line
 	6150 8500 6350 8500
 Wire Wire Line
 	6150 8300 6350 8300
-Text GLabel 6150 8800 0    45   Input ~ 0
-ACCEL_INT
 Wire Wire Line
 	6350 8800 6150 8800
-Text GLabel 5150 5200 2    45   Output ~ 0
-ACCEL_INT
 Wire Wire Line
-	5150 5200 4950 5200
-Text GLabel 5150 5000 2    45   Output ~ 0
-ACCEL_MISO
-Text GLabel 5150 5100 2    45   Output ~ 0
-ACCEL_~CS~
-Text GLabel 5150 4800 2    45   Output ~ 0
-ACCEL_SCLK
-Text GLabel 5150 4900 2    45   Input ~ 0
-ACCEL_MOSI
+	5150 4550 4950 4550
 Wire Wire Line
-	5150 5000 4950 5000
+	5150 4350 4950 4350
 Wire Wire Line
-	4950 4800 5150 4800
+	4950 4150 5150 4150
 Wire Wire Line
-	4950 5100 5150 5100
+	4950 4450 5150 4450
 Wire Wire Line
-	4950 4900 5150 4900
+	4950 4250 5150 4250
 Wire Wire Line
-	3500 4350 3500 4800
+	3500 3700 3500 4150
 Wire Wire Line
-	3150 4350 3150 4800
-$Comp
-L VMCU #PWR058
-U 1 1 5113B6A6
-P 3150 4350
-F 0 "#PWR058" H 3200 4380 20  0001 C CNN
-F 1 "VMCU" H 3150 4440 30  0000 C CNN
-	1    3150 4350
-	1    0    0    -1  
-$EndComp
-$Comp
-L VMCU #PWR059
-U 1 1 5113B6AC
-P 3500 4350
-F 0 "#PWR059" H 3550 4380 20  0001 C CNN
-F 1 "VMCU" H 3500 4440 30  0000 C CNN
-	1    3500 4350
-	1    0    0    -1  
-$EndComp
+	3150 3700 3150 4150
 Wire Notes Line
-	5800 5800 5800 3900
+	5800 5250 5800 3250
+Wire Wire Line
+	2300 4450 2300 4950
+Connection ~ 3150 4050
+Connection ~ 3500 3950
+Wire Wire Line
+	3500 4550 3500 4650
+Wire Wire Line
+	3150 4550 3150 4650
+Connection ~ 3500 4650
+Wire Wire Line
+	1550 5900 1550 5800
+Connection ~ 1550 5800
+Connection ~ 1550 6500
+Wire Wire Line
+	3950 4150 3800 4150
+Wire Wire Line
+	3800 4150 3800 4950
+Wire Wire Line
+	3950 4350 3800 4350
+Connection ~ 3800 4350
+Connection ~ 3800 4450
+Connection ~ 4750 1850
+Wire Wire Line
+	4750 1850 4850 1850
+Wire Wire Line
+	5350 1850 5250 1850
+Wire Wire Line
+	5350 1850 5350 2050
+Text Notes 1750 8150 0    30   ~ 0
+SP1 & SP2:\nMILL-MAX 0910-1\nSpring-Loaded Pin - SMD\nInitial Height: 4.5 mm - Stroke: 1.4 mm\n\nAlternative:\n0930 Spring-Loaded Pin - TH SOLDERTAIL\nInitial Height: 4.4 mm - Stroke: 1.4 mm
 $Comp
-L GND #PWR060
-U 1 1 5113C4AB
-P 2250 5550
-F 0 "#PWR060" H 2250 5550 30  0001 C CNN
-F 1 "GND" H 2250 5480 30  0001 C CNN
-	1    2250 5550
-	-1   0    0    -1  
-$EndComp
-Wire Wire Line
-	2250 5100 2250 5550
-Connection ~ 3150 4700
-Connection ~ 3500 4600
-Wire Wire Line
-	3500 5200 3500 5300
-Wire Wire Line
-	3150 5200 3150 5300
-Connection ~ 3500 5300
-NoConn ~ 4950 5300
-NoConn ~ 6350 8600
-NoConn ~ 4900 2650
-$Comp
-L R R17
-U 1 1 5116125A
-P 1250 6600
-F 0 "R17" V 1150 6600 50  0000 C CNN
-F 1 "100K" V 1250 6595 50  0000 C CNN
-	1    1250 6600
+L PIEZO_DIAPHRAGM-DUMMY X3
+U 1 1 511E0293
+P 2400 7400
+F 0 "X3" H 2400 7550 50  0000 C CNN
+F 1 "7BB-20-3" H 2400 7200 50  0000 C CNN
+F 4 "7BB-20-6L0" H 2400 7400 60  0001 C CNN "Alt_Value"
+	1    2400 7400
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	1250 6350 1250 6250
-Connection ~ 1250 6250
-Connection ~ 1250 6950
-Wire Wire Line
-	3950 4800 3800 4800
-Wire Wire Line
-	3800 4800 3800 5550
-Wire Wire Line
-	3950 5000 3800 5000
-Connection ~ 3800 5000
-Connection ~ 3800 5100
-NoConn ~ 3950 4900
+	14250 7750 14250 8500
+Text Notes 525  8875 0    50   ~ 0
+SP1 & SP2 P/N:
+$Comp
+L C C31
+U 1 1 511F6158
+P 2900 1950
+F 0 "C31" H 2950 2050 50  0000 L CNN
+F 1 "4U7" H 2950 1850 50  0000 L CNN
+F 4 "10VDC" H 3050 1750 50  0000 C CNN "Voltage"
+	1    2900 1950
+	1    0    0    -1  
+$EndComp
+Text Notes 2550 2950 0    50   ~ 0
+Replace ACHLR-02V-S:\nheight:1.2 mm,\nwith readily available ACHR-02V-S:\nheight: 1.4 mm
 $EndSCHEMATC

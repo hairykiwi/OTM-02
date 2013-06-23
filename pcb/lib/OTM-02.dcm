@@ -1,0 +1,15 @@
+EESchema-DOCLIB  Version 2.0  Date: 16/02/2013 08:05:14
+#
+$CMP ADXL362
+D Micropower, 3-Axis, ±2 g/±4 g/±8 g Digital Output (SPI) MEMS Accelerometer
+K MEMS Accelerometer Micropower 3-Axis
+F http://www.analog.com/static/imported-files/data_sheets/ADXL362.pdf
+$ENDCMP
+#
+$CMP MAX17048G+
+D Micropower 1-Cell/2-Cell Li+ ModelGauge (Li-Po Fuel Gauge) ICs
+K Li-Po Li-Io Li+ Fuel Gauge Battery ModelGauge Micropower
+F http://datasheets.maximintegrated.com/en/ds/MAX17048-MAX17049.pdf
+$ENDCMP
+#
+#End Doc Library
