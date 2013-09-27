@@ -1,13 +1,15 @@
-PCBNEW-LibModule-V1  10/02/2013 22:16:22
+PCBNEW-LibModule-V1  16/02/2013 09:43:12
 # encoding utf-8
 Units mm
 $INDEX
+0901-X_MILL-MAX
 2125_0805_32kHz_Crystal_Abracon
 304-103_PMDL
 304-103_PMDL_forDSNoutputONLY_
 4363X30458XX_RA_TACT_2-NET_WE
 4363X30458XX_RA_TACT_4-NET_WE
 4363X30458XX_WE
+7BB-20-3_piezoelectric diaphragm_murata
 8DFN_20x30x09_MC
 8DFN_20x30x09_MC_forDSNoutputONLY_
 8TDFN_90-0065_MAXIM
@@ -79,8 +81,28 @@ oshlogo_metric_F-Copper_w02750um_notext
 oshlogo_metric_F-SilkS_w02750um
 oshlogo_metric_F-SilkS_w02750um_notext
 pad_pair
+piezoelectric diaphragm_murata_7BB-20-3
 writingpad-15x8mm-SilkB
 $EndINDEX
+$MODULE 0901-X_MILL-MAX
+Po 0 0 0 15 511F547E 00000000 ~~
+Li 0901-X_MILL-MAX
+Kw DEV
+Sc 0
+AR /500EDF78
+Op 0 0 0
+T0 0 0 0.4 0.4 0 0.1 N V 21 N "P8"
+T1 0 0.4 0.127 0.127 0 0.03 N I 21 N "0910-1-57-20-75-14-11-0"
+DC 0 0 0.91 0 0.1 24
+DC 0 0 0.53 0 0.1 24
+$PAD
+Sh "1" C 2 2 0 0 0
+Dr 0 0 0
+At SMD N 00888000
+Ne 1 "GND"
+Po 0 0
+$EndPAD
+$EndMODULE 0901-X_MILL-MAX
 $MODULE 2125_0805_32kHz_Crystal_Abracon
 Po 0 0 0 15 508ECC3A 00000000 ~~
 Li 2125_0805_32kHz_Crystal_Abracon
@@ -518,6 +540,18 @@ Ne 0 ""
 Po 0 -1.375
 $EndPAD
 $EndMODULE 4363X30458XX_WE
+$MODULE 7BB-20-3_piezoelectric diaphragm_murata
+Po 0 0 0 15 511E8184 00000000 ~~
+Li 7BB-20-3_piezoelectric diaphragm_murata
+Sc 0
+AR 
+Op 0 0 0
+T0 0 0.6 0.4 0.4 0 0.1 N V 21 N "7BB-20-3_piezoelectric diaphragm_murata"
+T1 0 -0.7 0.4 0.4 0 0.1 N V 21 N "VAL**"
+DC 0 0 7 0 0.05 27
+DC 0 0 10 0 0.1 27
+DC 0 0 6.4 0 0.1 27
+$EndMODULE 7BB-20-3_piezoelectric diaphragm_murata
 $MODULE 8DFN_20x30x09_MC
 Po 0 0 0 15 51045B70 00000000 ~~
 Li 8DFN_20x30x09_MC
@@ -7094,6 +7128,16 @@ Ne 1 "MCUDBG_RESET"
 Po 0.65 0
 $EndPAD
 $EndMODULE pad_pair
+$MODULE piezoelectric diaphragm_murata_7BB-20-3
+Po 0 0 0 15 511E722F 00000000 ~~
+Li piezoelectric diaphragm_murata_7BB-20-3
+Sc 0
+AR 
+Op 0 0 0
+T0 0 0 1.5 1.5 0 0.1 N V 21 N "piezoelectric diaphragm_murata_7BB-20-3"
+T1 0 0 1.5 1.5 0 0.1 N V 21 N "VAL**"
+DC 0 0 20 0 0.1 27
+$EndMODULE piezoelectric diaphragm_murata_7BB-20-3
 $MODULE writingpad-15x8mm-SilkB
 Po 0 0 0 20 00000000 00000000 ~~
 Li writingpad-15x8mm-SilkB

@@ -1,4 +1,4 @@
-# EESchema Netlist Version 1.1 created  10/02/2013 13:55:52
+# EESchema Netlist Version 1.1 created  16/02/2013 15:43:41
 (
  ( /504DC403 $noname  X1 ABS06-32.768KHZ-9-1-T {Lib=CRYSTAL}
   (    1 LFXO_N )
@@ -33,22 +33,22 @@
   (    2 GND )
  )
  ( /50210568 $noname  C25 100N {Lib=C}
-  (    1 N-000010 )
+  (    1 N-000055 )
   (    2 GND )
  )
  ( /501FB810 $noname  C11 10U {Lib=C}
-  (    1 N-000052 )
+  (    1 N-000047 )
   (    2 GND )
  )
  ( /501EEDF1 $noname  SW1 KMS221GPLFS {Lib=SW_PUSH_TACT_2PIN}
   (    1 TR_PUSHER )
   (    2 GND )
  )
- ( /500EDF78 $noname  PAD2 PIEZO_PAD2 {Lib=GS1}
+ ( /500EDF78 $noname  SP2 0910-1-57-20-75-14-11-0 {Lib=GS1}
   (    1 GND )
  )
- ( /500EDF04 $noname  PAD1 PIEZO_PAD1 {Lib=GS1}
-  (    1 N-000005 )
+ ( /500EDF04 $noname  SP1 0910-1-57-20-75-14-11-0 {Lib=GS1}
+  (    1 N-000002 )
  )
  ( /500E9DC6 $noname  X2 ABM11-48.000MHZ-B7G-T {Lib=CRYSTAL_W_GND}
   (    1 HFXO_N )
@@ -57,7 +57,7 @@
   (    4 GND )
  )
  ( /5004207A $noname  Q3 PDTC114EE {Lib=NPN-RET}
-  (    1 N-000044 )
+  (    1 N-000050 )
   (    2 GND )
   (    3 BAT_CHG_STAT )
  )
@@ -88,11 +88,11 @@
   (   20 MCUDBG_RESET )
   (   21 BACKLIGHT_EN )
   (   22 ? )
-  (   23 N-000052 )
+  (   23 N-000047 )
   (   24 HFXO_P )
   (   25 HFXO_N )
   (   26 VMCU )
-  (   27 N-000052 )
+  (   27 N-000047 )
   (   28 ACCEL_MOSI )
   (   29 ACCEL_MISO )
   (   30 ACCEL_SCLK )
@@ -105,13 +105,13 @@
   (   37 FG_I2C_SDA )
   (   38 FG_I2C_SCL )
   (   39 VMCU )
-  (   40 N-000016 )
+  (   40 N-000042 )
   (   41 MLCD_SSEL )
   (   42 MLCD_SCK )
   (   43 MLCD_VDD )
   (   44 MLCD_MOSI )
   (   45 +5V_USB )
-  (   46 N-000002 )
+  (   46 N-000013 )
   (   47 USB_DM )
   (   48 USB_DP )
   (   49 DBG_SWCLK )
@@ -137,10 +137,10 @@
   (    2 VBATT_SENSE )
  )
  ( /4FFED84A $noname  R3 500R {Lib=R}
-  (    1 N-000005 )
+  (    1 N-000002 )
   (    2 PIEZO_DRIVE )
  )
- ( /4FFDFF31 $noname  P7 DBG_RESETn {Lib=CONN_1}
+ ( /4FFDFF31 $noname  P6 DBG_RESETn {Lib=CONN_1}
   (    1 MCUDBG_RESET )
  )
  ( /4FFDFF10 $noname  P5 DBG_SWO {Lib=CONN_1}
@@ -163,10 +163,10 @@
   (    2 +5V_USB )
   (    3 VBATT_SENSE )
   (    4 VBATT_SENSE )
-  (    5 N-000044 )
+  (    5 N-000050 )
   (    6 GND )
   (    7 ? )
-  (    8 N-000004 )
+  (    8 N-000001 )
   (   EP GND )
  )
  ( /4FFD5521 $noname  R2 100K {Lib=R}
@@ -187,7 +187,7 @@
  )
  ( /4FFC6FB6 $noname  D1 PZU3.3B1 {Lib=ZENER}
   (    1 GND )
-  (    2 N-000005 )
+  (    2 N-000002 )
  )
  ( /4FFB173C $noname  R11 100K {Lib=R}
   (    1 GND )
@@ -195,21 +195,21 @@
  )
  ( /4FFACA9E $noname  D2 1PS79SB30 {Lib=DIODESCH}
   (    1 GND )
-  (    2 N-000005 )
+  (    2 N-000002 )
  )
  ( /4FFABBBA $noname  U4 TPS78230DRVT {Lib=TPS782XXDRV}
   (    1 VMCU )
   (    2 ? )
   (    3 GND )
-  (    4 N-000010 )
+  (    4 N-000055 )
   (    5 GND )
-  (    6 N-000010 )
+  (    6 N-000055 )
   (  PAD GND )
   (  TV1 GND )
   (  TV2 GND )
  )
  ( /4FFA1FB2 $noname  C30 2U2 {Lib=C}
-  (    1 N-000010 )
+  (    1 N-000055 )
   (    2 GND )
  )
  ( /4FFA1FB1 $noname  C28 2U2 {Lib=C}
@@ -218,14 +218,14 @@
  )
  ( /4FF99A01 $noname  C13 100N {Lib=C}
   (    1 3V0 )
-  (    2 N-000051 )
+  (    2 N-000039 )
  )
  ( /4FF999D2 $noname  D3 1PS79SB30 {Lib=DIODESCH}
-  (    1 N-000051 )
+  (    1 N-000039 )
   (    2 3V0 )
  )
  ( /4FF99833 $noname  M1 304-103 {Lib=MOTOR}
-  (    1 N-000051 )
+  (    1 N-000039 )
   (    2 3V0 )
   (  GND GND )
  )
@@ -243,7 +243,7 @@
  )
  ( /4FF7668C $noname  C16 1U {Lib=C}
   (    1 GND )
-  (    2 N-000002 )
+  (    2 N-000013 )
  )
  ( /4FF470C9 $noname  C7 10P {Lib=C}
   (    1 HFXO_P )
@@ -262,28 +262,28 @@
   (    2 GND )
  )
  ( /4FF44600 $noname  J1 USB_MICRO_AB {Lib=USB_MICRO_AB}
-  (    1 N-000025 )
-  (    2 N-000057 )
-  (    3 N-000058 )
+  (    1 N-000007 )
+  (    2 N-000052 )
+  (    3 N-000037 )
   (    4 ? )
   (    5 GND )
   (    6 GND )
  )
  ( /4FF38284 $noname  D4 IP4221CZ6-S {Lib=IP4220CZ6}
-  (    1 N-000057 )
+  (    1 N-000052 )
   (    2 GND )
-  (    3 N-000058 )
-  (    4 N-000058 )
-  (    5 N-000025 )
-  (    6 N-000057 )
+  (    3 N-000037 )
+  (    4 N-000037 )
+  (    5 N-000007 )
+  (    6 N-000052 )
  )
  ( /4FF35AD7 $noname  R6 15R {Lib=R}
   (    1 USB_DP )
-  (    2 N-000058 )
+  (    2 N-000037 )
  )
  ( /4FF35AC4 $noname  R7 15R {Lib=R}
   (    1 USB_DM )
-  (    2 N-000057 )
+  (    2 N-000052 )
  )
  ( /4FF2DA18 $noname  R8 100K {Lib=R}
   (    1 +5V_USB )
@@ -291,26 +291,22 @@
  )
  ( /4FCFC828 $noname  R10 10K {Lib=R}
   (    1 GND )
-  (    2 N-000004 )
+  (    2 N-000001 )
  )
  ( /4FCF9920 $noname  C22 4U7 {Lib=C}
   (    1 +5V_USB )
   (    2 GND )
  )
- ( /4FCF90BB $noname  C31 4U7 {Lib=C}
-  (    1 VBATT_SENSE )
-  (    2 GND )
- )
  ( /4FCF61A9 $noname  D5 1PS79SB30 {Lib=DIODESCH}
   (    1 +5V_USB )
-  (    2 N-000010 )
+  (    2 N-000055 )
  )
  ( /4FCCADC5 $noname  C26 2U2 {Lib=C}
   (    1 VMCU )
   (    2 GND )
  )
  ( /4FCCAD47 $noname  C29 2U2 {Lib=C}
-  (    1 N-000010 )
+  (    1 N-000055 )
   (    2 GND )
  )
  ( /4FC7BEEB $noname  C3 100N {Lib=C}
@@ -326,7 +322,7 @@
   (    2 GND )
  )
  ( /4F5540B8 $noname  C15 1U {Lib=C}
-  (    1 N-000016 )
+  (    1 N-000042 )
   (    2 GND )
  )
  ( /4F53FEFC $noname  C10 100N {Lib=C}
@@ -338,11 +334,11 @@
   (    2 GND )
  )
  ( /4F53F695 $noname  C8 10N {Lib=C}
-  (    1 N-000052 )
+  (    1 N-000047 )
   (    2 GND )
  )
  ( /4F53F676 $noname  C14 10N {Lib=C}
-  (    1 N-000052 )
+  (    1 N-000047 )
   (    2 GND )
  )
  ( /4E761D13 $noname  R1 100K {Lib=R}
@@ -351,14 +347,14 @@
  )
  ( /508E7DA8 $noname  L2 WE-742792662 {Lib=INDUCTOR}
   (    1 VMCU )
-  (    2 N-000023 )
+  (    2 N-000022 )
  )
  ( /508E7FC0 $noname  R5 1R {Lib=R}
-  (    1 N-000023 )
-  (    2 N-000052 )
+  (    1 N-000022 )
+  (    2 N-000047 )
  )
  ( /508E9206 $noname  L1 WE-742792641 {Lib=INDUCTOR}
-  (    1 N-000025 )
+  (    1 N-000007 )
   (    2 +5V_USB )
  )
  ( /509921C5 $noname  C1 10N {Lib=C}
@@ -385,20 +381,20 @@
   (    1 VBATT_SENSE )
   (    2 VBATT_SENSE )
   (    3 +5V_USB )
-  (    4 N-000010 )
+  (    4 N-000055 )
   (    5 VBATT_SENSE )
   (    6 VBATT_SENSE )
  )
  ( /50F5A0F1 WSMini6-F1-B  Q1 FK6K02010L {Lib=MOS_N_6LEAD}
-  (    1 N-000051 )
-  (    2 N-000051 )
+  (    1 N-000039 )
+  (    2 N-000039 )
   (    3 VIB_MOTOR_EN )
   (    4 GND )
-  (    5 N-000051 )
-  (    6 N-000051 )
+  (    5 N-000039 )
+  (    6 N-000039 )
  )
  ( /50F5B1EE $noname  LED1 ASMT-CW00 {Lib=LED}
-  (    1 N-000027 )
+  (    1 N-000041 )
   (    2 GND )
  )
  ( /50F7E80D $noname  U5 TPS78230DRVT {Lib=TPS782XXDRV}
@@ -407,12 +403,12 @@
   (    3 GND )
   (    4 3V0_EN )
   (    5 GND )
-  (    6 N-000010 )
+  (    6 N-000055 )
   (  PAD GND )
   (  TV1 GND )
   (  TV2 GND )
  )
- ( /50F82304 $noname  J3 AHCL {Lib=CONN_BAT}
+ ( /50F82304 $noname  J3 ACHLR-02V-S {Lib=CONN_BAT}
   (    1 VBATT_SENSE )
   (    2 GND )
   (   A1 GND )
@@ -445,7 +441,7 @@
  )
  ( /51129D4F $noname  R15 10R {Lib=R}
   (    1 BACKLIGHT_EN )
-  (    2 N-000027 )
+  (    2 N-000041 )
  )
  ( /5113A36F $noname  U2 ADXL362 {Lib=ADXL362}
   (    1 VMCU )
@@ -476,6 +472,12 @@
  ( /5116125A $noname  R17 100K {Lib=R}
   (    1 GND )
   (    2 VIB_MOTOR_EN )
+ )
+ ( /511E0293 $noname  X3 7BB-20-3 {Lib=PIEZO_DIAPHRAGM-DUMMY}
+ )
+ ( /511F6158 $noname  C31 4U7 {Lib=C}
+  (    1 VBATT_SENSE )
+  (    2 GND )
  )
 )
 *
@@ -694,11 +696,6 @@ $component C22
  C?
  C1-1
 $endlist
-$component C31
- SM*
- C?
- C1-1
-$endlist
 $component D5
  D?
  S*
@@ -844,332 +841,337 @@ $component R17
  R?-*
  SM1206
 $endlist
+$component C31
+ SM*
+ C?
+ C1-1
+$endlist
 $endfootprintlist
 }
 { Pin List by Nets
-Net 1 "USB_DM" "USB_DM"
- U1 47
- R7 1
-Net 2 "" ""
- U1 46
- C16 2
-Net 3 "+5V_USB" "+5V_USB"
- U3 2
- D5 1
- U1 45
- U1 52
- R8 1
- Q2 3
- L1 2
- C18 1
- C22 1
- U3 1
-Net 4 "" ""
- R10 2
+Net 1 "" ""
  U3 8
-Net 5 "" ""
- R3 1
- PAD1 1
- D1 2
+ R10 2
+Net 2 "" ""
+ SP1 1
  D2 2
-Net 6 "PIEZO_DRIVE" "PIEZO_DRIVE"
- U1 3
+ D1 2
+ R3 1
+Net 3 "PIEZO_DRIVE" "PIEZO_DRIVE"
  R3 2
-Net 7 "MLCD_VDD" "MLCD_VDD"
- U1 43
- J2 6
- C21 1
- C27 1
- J2 7
+ U1 3
+Net 4 "MLCD_VDD" "MLCD_VDD"
  J2 8
-Net 8 "MLCD_SSEL" "MLCD_SSEL"
- U1 41
+ J2 6
+ J2 7
+ C27 1
+ C21 1
+ U1 43
+Net 5 "MLCD_SSEL" "MLCD_SSEL"
  J2 3
-Net 9 "3V0" "3V0"
- U5 1
- D3 2
- C13 1
- C28 1
- M1 2
-Net 10 "" ""
- C25 1
- U4 4
- Q2 4
- U4 6
- D5 2
- U5 6
- C29 1
- C30 1
-Net 11 "BL_PUSHER" "BL_PUSHER"
- C34 1
- U1 60
- SW5 1
- R16 2
-Net 12 "CR_PUSHER" "CR_PUSHER"
- SW3 1
- U1 5
- R9 2
- C19 1
-Net 13 "FG_I2C_SDA" "FG_I2C_SDA"
- U6 8
- R12 1
- U1 37
-Net 14 "DBG_SWCLK" "DBG_SWCLK"
- P4 1
- U1 49
-Net 15 "MCUDBG_RESET" "MCUDBG_RESET"
- C3 1
- P7 1
- U1 20
-Net 16 "" ""
- C15 1
- U1 40
-Net 17 "DBG_SWO" "DBG_SWO"
- P5 1
- U1 51
-Net 18 "DBG_SWDIO" "DBG_SWDIO"
- U1 50
- P2 1
-Net 19 "LFXO_N" "LFXO_N"
- U1 16
- X1 1
- C4 1
-Net 20 "HFXO_N" "HFXO_N"
- C12 1
- U1 25
- X2 1
-Net 21 "VMCU" "VMCU"
- U2 14
- C9 1
- R1 1
- L2 1
- P1 1
- C17 1
- C10 1
- C6 1
- U1 39
- C23 2
- R9 1
- C24 2
- R14 1
- R16 1
- R2 1
- C26 1
- U4 1
- R12 2
- U2 1
- R4 2
- U1 55
- U1 8
- R13 2
- U1 26
-Net 23 "" ""
- L2 2
- R5 1
-Net 24 "3V0_EN" "3V0_EN"
+ U1 41
+Net 6 "3V0_EN" "3V0_EN"
  U5 4
  U1 53
  R11 2
-Net 25 "" ""
- L1 1
+Net 7 "" ""
  J1 1
+ L1 1
  D4 5
-Net 26 "GND" "GND"
- C5 2
- C4 2
- SW2 2
- M1 GND
+Net 8 "MCUDBG_RESET" "MCUDBG_RESET"
+ C3 1
+ P6 1
+ U1 20
+Net 9 "DBG_SWO" "DBG_SWO"
+ P5 1
+ U1 51
+Net 10 "DBG_SWDIO" "DBG_SWDIO"
+ U1 50
+ P2 1
+Net 11 "BL_PUSHER" "BL_PUSHER"
+ C34 1
+ R16 2
+ U1 60
+ SW5 1
+Net 12 "CR_PUSHER" "CR_PUSHER"
+ R9 2
+ SW3 1
+ C19 1
+ U1 5
+Net 13 "" ""
+ U1 46
+ C16 2
+Net 14 "USB_DM" "USB_DM"
+ R7 1
+ U1 47
+Net 15 "+5V_USB" "+5V_USB"
+ L1 2
+ Q2 3
+ R8 1
+ U1 52
+ U1 45
+ C22 1
+ D5 1
+ U3 1
+ U3 2
+ C18 1
+Net 17 "ACCEL_MISO" "ACCEL_MISO"
+ U1 29
+ U2 7
+Net 18 "ACCEL_INT" "ACCEL_INT"
+ U1 34
+ U2 9
+Net 20 "VIB_MOTOR_EN" "VIB_MOTOR_EN"
+ R17 2
+ U1 63
+ Q1 3
+Net 22 "" ""
+ R5 1
+ L2 2
+Net 23 "ACCEL_~CS~" "ACCEL_~CS~"
+ U1 31
+ U2 8
+Net 26 "ACCEL_SCLK" "ACCEL_SCLK"
+ U1 30
+ U2 4
+Net 27 "ACCEL_MOSI" "ACCEL_MOSI"
+ U2 6
+ U1 28
+Net 29 "HFXO_N" "HFXO_N"
+ C12 1
+ X2 1
+ U1 25
+Net 30 "LFXO_N" "LFXO_N"
+ X1 1
+ U1 16
+ C4 1
+Net 31 "LFXO_P" "LFXO_P"
+ U1 15
+ C5 1
+ X1 2
+Net 32 "HFXO_P" "HFXO_P"
+ X2 3
+ U1 24
+ C7 1
+Net 33 "FG_I2C_SDA" "FG_I2C_SDA"
+ U1 37
+ R12 1
+ U6 8
+Net 34 "FG_I2C_SCL" "FG_I2C_SCL"
+ R13 1
+ U6 7
+ U1 38
+Net 35 "BACKLIGHT_EN" "BACKLIGHT_EN"
+ U1 21
+ R15 1
+Net 36 "GND" "GND"
+ SW4 2
+ SW5 2
+ D2 1
+ SW3 2
+ U3 6
+ D1 1
+ R11 1
+ U4 TV2
+ C12 2
+ C28 2
+ U4 PAD
+ C25 2
  U4 TV1
  U4 5
  U4 3
- C16 1
+ C30 2
  C18 2
+ C16 1
+ M1 GND
  U3 EP
- U3 6
+ C5 2
+ C4 2
+ SW2 2
  SW1 2
  C11 2
- C25 2
- C12 2
- C28 2
- C30 2
- U4 PAD
- U4 TV2
- J3 A1
- U5 3
- U5 5
- U5 TV1
  U5 TV2
- U5 PAD
- J3 2
- Q1 4
- R8 2
- U1 65
+ C21 2
+ C27 2
+ C20 2
  C7 2
+ U1 65
+ R8 2
+ J3 2
+ U5 PAD
+ U5 TV1
+ U5 5
+ U5 3
  LED1 2
+ Q1 4
  U6 EP
  U6 6
  U6 4
  U6 1
- J2 A1
- J2 10
- J2 9
- R10 1
  C3 2
- C22 2
  C29 2
  C26 2
- C31 2
+ J2 A2
+ C22 2
  D4 2
  J1 6
  J1 5
- C21 2
- C27 2
- C20 2
- X2 4
- C1 2
- Q3 2
+ C34 2
+ C32 2
+ R10 1
  C19 2
+ C1 2
+ C2 2
+ X2 4
  X2 2
- PAD2 1
+ SP2 1
+ Q3 2
  P3 1
  C33 1
- SW3 2
- SW4 2
- SW5 2
- C6 2
+ J3 A1
+ J2 A1
+ J2 10
+ J2 9
  J3 A2
- J2 A2
  C14 2
  C8 2
+ C6 2
  C10 2
  C15 2
  C9 2
  C17 2
- C2 2
- C34 2
- C32 2
- C23 1
- C24 1
- U2 12
- D1 1
- U2 16
  R17 1
- D2 1
- R11 1
+ C24 1
  U2 3
  U2 10
+ U2 12
  U2 13
-Net 27 "" ""
- R15 2
- LED1 1
-Net 32 "BACKLIGHT_EN" "BACKLIGHT_EN"
- U1 21
- R15 1
-Net 33 "FG_I2C_SCL" "FG_I2C_SCL"
- U6 7
- R13 1
- U1 38
-Net 36 "VIB_MOTOR_EN" "VIB_MOTOR_EN"
- Q1 3
- R17 2
- U1 63
-Net 37 "ACCEL_MISO" "ACCEL_MISO"
- U2 7
- U1 29
-Net 38 "ACCEL_MOSI" "ACCEL_MOSI"
- U2 6
- U1 28
-Net 39 "ACCEL_~CS~" "ACCEL_~CS~"
- U2 8
- U1 31
-Net 40 "ACCEL_SCLK" "ACCEL_SCLK"
- U1 30
- U2 4
-Net 41 "ACCEL_INT" "ACCEL_INT"
- U1 34
- U2 9
-Net 42 "MLCD_SCK" "MLCD_SCK"
- U1 42
- J2 1
-Net 43 "MLCD_DISP" "MLCD_DISP"
- J2 5
- C20 1
- U1 36
-Net 44 "" ""
- U3 5
- Q3 1
-Net 45 "USB_DP" "USB_DP"
- R6 1
- U1 48
-Net 46 "MLCD_EXTCOM" "MLCD_EXTCOM"
- U1 35
- J2 4
-Net 47 "MLCD_MOSI" "MLCD_MOSI"
- J2 2
- U1 44
-Net 48 "TR_PUSHER" "TR_PUSHER"
- C1 1
- U1 6
- R1 2
- SW1 1
-Net 49 "BR_PUSHER" "BR_PUSHER"
- C32 1
- U1 4
- R14 2
- SW4 1
-Net 50 "TL_PUSHER" "TL_PUSHER"
- R2 2
- C2 1
- SW2 1
- U1 61
-Net 51 "" ""
- D3 1
+ U2 16
+ C23 1
+ C31 2
+Net 37 "" ""
+ J1 3
+ D4 4
+ D4 3
+ R6 2
+Net 38 "3V0" "3V0"
+ M1 2
+ U5 1
+ C13 1
+ D3 2
+ C28 1
+Net 39 "" ""
  C13 2
+ D3 1
+ M1 1
  Q1 6
  Q1 5
- M1 1
  Q1 2
  Q1 1
-Net 52 "" ""
- U1 27
- U1 23
+Net 40 "VMCU" "VMCU"
+ C17 1
+ R2 1
+ R16 1
+ P1 1
+ U2 1
+ U2 14
+ C23 2
+ C24 2
+ R9 1
+ C26 1
+ R4 2
+ R14 1
+ R1 1
+ L2 1
+ C9 1
+ U1 55
+ C10 1
+ C6 1
+ R12 2
+ R13 2
+ U1 39
+ U1 26
+ U4 1
+ U1 8
+Net 41 "" ""
+ R15 2
+ LED1 1
+Net 42 "" ""
+ U1 40
+ C15 1
+Net 43 "USB_DP" "USB_DP"
+ R6 1
+ U1 48
+Net 44 "MLCD_EXTCOM" "MLCD_EXTCOM"
+ U1 35
+ J2 4
+Net 45 "MLCD_MOSI" "MLCD_MOSI"
+ U1 44
+ J2 2
+Net 46 "TR_PUSHER" "TR_PUSHER"
+ U1 6
+ R1 2
+ C1 1
+ SW1 1
+Net 47 "" ""
  C11 1
- C8 1
  C14 1
+ U1 27
  R5 2
-Net 53 "HFXO_P" "HFXO_P"
- C7 1
- X2 3
- U1 24
-Net 54 "LFXO_P" "LFXO_P"
- X1 2
- C5 1
- U1 15
-Net 55 "VBATT_SENSE" "VBATT_SENSE"
- U6 2
- Q2 6
+ C8 1
+ U1 23
+Net 48 "DBG_SWCLK" "DBG_SWCLK"
+ P4 1
+ U1 49
+Net 49 "BAT_CHG_STAT" "BAT_CHG_STAT"
+ U1 62
+ R4 1
+ Q3 3
+Net 50 "" ""
+ U3 5
+ Q3 1
+Net 51 "VBATT_SENSE" "VBATT_SENSE"
  Q2 5
- Q2 2
- C31 1
- U6 3
- C33 2
- Q2 1
  U3 3
  U3 4
  J3 1
-Net 56 "BAT_CHG_STAT" "BAT_CHG_STAT"
- R4 1
- Q3 3
- U1 62
-Net 57 "" ""
- R7 2
+ C31 1
+ U6 2
+ U6 3
+ Q2 6
+ C33 2
+ Q2 1
+ Q2 2
+Net 52 "" ""
  J1 2
  D4 6
+ R7 2
  D4 1
-Net 58 "" ""
- J1 3
- R6 2
- D4 3
- D4 4
+Net 53 "BR_PUSHER" "BR_PUSHER"
+ U1 4
+ R14 2
+ SW4 1
+ C32 1
+Net 54 "TL_PUSHER" "TL_PUSHER"
+ R2 2
+ C2 1
+ U1 61
+ SW2 1
+Net 55 "" ""
+ C29 1
+ U5 6
+ D5 2
+ C25 1
+ Q2 4
+ U4 6
+ C30 1
+ U4 4
+Net 56 "MLCD_SCK" "MLCD_SCK"
+ U1 42
+ J2 1
+Net 57 "MLCD_DISP" "MLCD_DISP"
+ J2 5
+ U1 36
+ C20 1
 }
 #End
